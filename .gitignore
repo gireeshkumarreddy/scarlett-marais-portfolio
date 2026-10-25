@@ -1,0 +1,8 @@
+# render checks
+video/stills/
+video/check.jpg
+video/sheet*.jpg
+
+# local tooling
+.claude/
+__pycache__/

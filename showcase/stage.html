@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scarlett Marais launch film</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300..700&family=Imperial+Script&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+:root{
+  /* Stage: the live site fills a 1920x1080 frame; title cards, wipes and captions sit above it */
+  --cream:#F7EFEA; --blush:#F6D7D5; --rose:#F0B4B8; --red:#C1121F; --wine:#6B0A12; --ink:#1C0709;
+  --f-display:"Instrument Serif",Didot,Georgia,serif;
+  --f-script:"Imperial Script",cursive;
+  --f-sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:var(--ink)}
+body{font-family:var(--f-sans);-webkit-font-smoothing:antialiased}
+#cam{position:absolute;inset:0;transform-origin:50% 50%}
+#site{position:absolute;left:0;top:0;width:1920px;height:1080px;border:0;display:block;background:var(--cream)}
+.label{font:500 13px/1.3 var(--f-sans);letter-spacing:.12em;text-transform:uppercase;margin:0}
+.card{position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr auto;padding:44px 64px;box-sizing:border-box}
+.row{display:flex;justify-content:space-between}
+.script svg{display:block;width:100%;height:auto;overflow:visible}
+.script .ink{fill:currentColor}
+.script .nib{opacity:0}
+.script .nib__glow{fill:currentColor;opacity:.22}
+.script .nib__tip{fill:#fff}
+
+#title{background:var(--wine);color:var(--cream)}
+.title__mid{display:grid;place-items:center;align-content:center;text-align:center;gap:10px}
+.title__intro{color:var(--rose);letter-spacing:.32em;margin-bottom:22px}
+.title__h{font:400 150px/.9 var(--f-display);letter-spacing:-.045em;margin:0}
+.title__h .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
+.title__h .w > span{display:inline-block}
+.title__script{width:1060px;color:var(--rose);margin-top:-24px}
+
+#wipe{position:absolute;inset:0;display:grid;grid-template-rows:1fr auto;padding:44px 64px;box-sizing:border-box;background:var(--cream);color:var(--red)}
+#wipe[data-theme="red"]{background:var(--red);color:var(--cream)}
+.wipe__t{align-self:center;justify-self:center;text-align:center;font:400 200px/.86 var(--f-display);letter-spacing:-.05em;margin:0}
+.wipe__t em{font-style:italic}
+
+#cap{position:absolute;left:50%;top:30px;display:flex;align-items:center;gap:18px;padding:12px 30px 12px 12px;border-radius:999px;background:rgba(28,7,9,.8);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:var(--cream);box-shadow:0 24px 60px -24px rgba(0,0,0,.7);white-space:nowrap;opacity:0;visibility:hidden}
+.cap__l{font:600 12px/1 var(--f-sans);letter-spacing:.16em;text-transform:uppercase;background:var(--red);padding:10px 14px;border-radius:999px}
+.cap__t{font:italic 400 32px/1.05 var(--f-display);letter-spacing:-.01em;display:block;overflow:hidden;padding-bottom:2px}
+.cap__t span{display:inline-block}
+
+#end{background:var(--wine);color:var(--cream)}
+.end__mid{display:grid;justify-items:center;align-content:center;gap:6px;text-align:center}
+.end__script{width:1180px}
+.end__sub{font:400 150px/.8 var(--f-display);letter-spacing:-.045em;margin:-40px 0 34px}
+.end__role{color:var(--rose)}
+.end__pill{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:16px 26px;border-radius:999px;background:var(--cream);color:var(--red);font-weight:600}
+.end__pill i{width:10px;height:10px;border-radius:50%;background:#2fb26a}
+#fade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="cam"><iframe id="site" src="../index.html?film" title="Scarlett Marais portfolio"></iframe></div>
+
+<div id="cap"><span class="cap__l"></span><span class="cap__t"><span></span></span></div>
+
+<section id="wipe" aria-hidden="true">
+  <p class="wipe__t"></p>
+  <div class="row label"><span>Scarlett Marais</span><span>Portfolio 2026</span></div>
+</section>
+
+<section class="card" id="title">
+  <div class="row label"><span>Scarlett Marais</span><span>Portfolio launch · 2026</span></div>
+  <div class="title__mid">
+    <p class="label title__intro">Introducing</p>
+    <h1 class="title__h"><span class="w"><span>A</span></span> <span class="w"><span>portfolio</span></span> <span class="w"><span>that</span></span> <span class="w"><span>makes</span></span></h1>
+    <div class="script title__script" data-word="brands blush" data-stroke="96"></div>
+  </div>
+  <div class="row label"><span>Marketing &amp; brand strategy</span><span>Los Angeles</span></div>
+</section>
+
+<section class="card" id="end">
+  <div class="row label"><span>Scarlett Marais</span><span>Portfolio 2026</span></div>
+  <div class="end__mid">
+    <div class="script end__script" data-word="Scarlett" data-stroke="104"></div>
+    <p class="end__sub">Marais</p>
+    <p class="label end__role">Marketing &amp; brand strategy · Los Angeles</p>
+    <span class="end__pill label"><i></i>Now booking Q1 2027</span>
+  </div>
+  <div class="row label"><span>Live now</span><span>Made with love, in red</span></div>
+</section>
+<div id="fade"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="../script-words.js"></script>
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const site = $('#site');
+  const SW = () => site.contentWindow, SD = () => site.contentDocument;
+  const DURATION = 40;
+  const mouse = { x: 1720, y: 640, down: false };
+  let keys = [], siteRun = false, siteSpeed = 1;
+
+  /* recorder interface: where the pointer is this frame, keys to type, and whether the site clock runs */
+  window.__meta = { duration: DURATION };
+  window.__frame = () => {
+    const r = site.getBoundingClientRect(), s = r.width / 1920;
+    const out = { x: r.left + mouse.x * s, y: r.top + mouse.y * s, down: mouse.down, keys, siteRun, siteSpeed };
+    keys = [];
+    return out;
+  };
+
+  /* handwriting, same technique as the site */
+  let inkId = 0;
+  function buildScript(el) {
+    const W = SCRIPT_WORDS[el.dataset.word], [x, y, w, h] = W.vb, id = 'sk' + (++inkId), sw = +el.dataset.stroke || 96;
+    let mask = '', fill = '';
+    W.g.forEach(c => { c.forEach(d => { mask += `<path d="${d}"/>`; }); fill += c.join(''); });
+    el.innerHTML = `<svg viewBox="${x} ${y} ${w} ${h}"><defs><mask id="${id}" maskUnits="userSpaceOnUse" x="${x - sw}" y="${y - sw}" width="${w + 2 * sw}" height="${h + 2 * sw}"><g fill="none" stroke="#fff" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${mask}</g></mask></defs><path class="ink" d="${fill}" mask="url(#${id})"/><g class="nib"><circle class="nib__glow" r="${sw * .5}"/><circle class="nib__tip" r="${sw * .14}"/></g></svg>`;
+    const paths = [...el.querySelectorAll('mask path')];
+    paths.forEach(p => { const L = p.getTotalLength(); p._L = L; p.style.strokeDasharray = `${L} ${L}`; p.style.strokeDashoffset = L; });
+    el._s = { paths, nib: el.querySelector('.nib') };
+  }
+  function write(el, duration) {
+    const { paths, nib } = el._s, tl = gsap.timeline(), total = paths.reduce((a, p) => a + p._L, 0);
+    tl.set(nib, { opacity: 1 });
+    paths.forEach((p, i) => {
+      const L = p._L, o = { t: 0 };
+      tl.to(o, { t: 1, duration: Math.max(.06, L / total * duration), ease: 'none', onUpdate() {
+        const t = o.t, f = t < .72 ? t / .72 * .56 : .56 + (t - .72) / .28 * .44, len = f * L;
+        p.style.strokeDashoffset = L - len;
+        const pt = p.getPointAtLength(len);
+        nib.setAttribute('transform', `translate(${pt.x.toFixed(1)} ${pt.y.toFixed(1)})`);
+      } }, i ? '>-0.03' : 0);
+    });
+    return tl.to(nib, { opacity: 0, duration: .3 });
+  }
+
+  /* director helpers. Positions are in site pixels and resolved when each move starts */
+  const el = t => typeof t === 'function' ? t() : SD().querySelector(t);
+  function pt(t, ox = .5, oy = .5) {
+    const e = t && typeof t === 'object' && 'x' in t ? t : el(t);
+    if (!e.getBoundingClientRect) return e;
+    const b = e.getBoundingClientRect();
+    return { x: b.left + b.width * ox, y: b.top + b.height * oy };
+  }
+  const easeIO = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const easeSine = t => -(Math.cos(Math.PI * t) - 1) / 2;
+
+  function build() {
+    const tl = gsap.timeline();
+    const move = (at, target, dur = .8, ox, oy) => {
+      let p = null;
+      tl.to(mouse, { x: () => (p = pt(target, ox, oy)).x, duration: dur, ease: 'power3.inOut' }, at)
+        .to(mouse, { y: () => p.y, duration: dur, ease: 'power2.inOut' }, at);
+    };
+    const click = at => tl.set(mouse, { down: true }, at).set(mouse, { down: false }, at + .1);
+    const drag = (at, dx, dy, dur = .55) => {
+      let p = null;
+      tl.set(mouse, { down: true }, at)
+        .to(mouse, { x: () => (p = { x: mouse.x + dx, y: mouse.y + dy }).x, duration: dur, ease: 'power2.out' }, at + .08)
+        .to(mouse, { y: () => p.y, duration: dur, ease: 'sine.inOut' }, at + .08)
+        .set(mouse, { down: false }, at + .08 + dur);
+    };
+    const type = (at, text, cps = 11) => [...text].forEach((ch, i) => tl.call(() => keys.push(ch), null, at + i / cps));
+    const scroll = (at, target, dur = 1.6, opts = {}) => tl.call(() => {
+      const t = typeof target === 'function' ? target() : (typeof target === 'number' ? target : SD().querySelector(target));
+      SW().__lenis.scrollTo(t, { duration: dur, easing: easeIO, ...opts });
+    }, null, at);
+    const cam = (at, scale, dur = 4, origin = '50% 50%') => tl.set('#cam', { transformOrigin: origin }, at).to('#cam', { scale, duration: dur, ease: 'sine.inOut' }, at);
+    const caption = (at, label, text, dur) => {
+      tl.call(() => { $('.cap__l').textContent = label; $('.cap__t span').textContent = text; }, null, at)
+        .fromTo('#cap', { autoAlpha: 0, y: -22 }, { autoAlpha: 1, y: 0, duration: .55, ease: 'power3.out', immediateRender: false }, at)
+        .fromTo('.cap__t span', { yPercent: 105 }, { yPercent: 0, duration: .7, ease: 'power4.out', immediateRender: false }, at + .12)
+        .to('#cap', { autoAlpha: 0, y: -12, duration: .4, ease: 'power2.in' }, at + dur - .4);
+    };
+    const wipe = (at, html, theme, onCover) => {
+      tl.call(() => { $('.wipe__t').innerHTML = html; $('#wipe').dataset.theme = theme; }, null, at)
+        .fromTo('#wipe', { xPercent: 100 }, { xPercent: 0, duration: .62, ease: 'expo.inOut', immediateRender: false }, at)
+        .fromTo('.wipe__t', { xPercent: 26, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, duration: .9, ease: 'expo.out', immediateRender: false }, at + .22)
+        .call(onCover, null, at + .66)
+        .to('.wipe__t', { xPercent: -18, autoAlpha: 0, duration: .5, ease: 'power2.in' }, at + 1.35)
+        .to('#wipe', { xPercent: -100, duration: .7, ease: 'expo.inOut' }, at + 1.3);
+    };
+    const hover = (at, sel, dur = .7, ox, oy) => move(at, sel, dur, ox, oy);
+
+    gsap.set('#wipe', { xPercent: 100 });
+    gsap.set('#cap', { xPercent: -50 });
+    gsap.set('#end', { yPercent: 100 });
+    const speed = (at, v) => tl.call(() => { siteSpeed = v; }, null, at);
+
+    /* 0.0  title card, then the hero fades in underneath it and the name writes itself */
+    tl.from('#title .row', { autoAlpha: 0, y: 10, duration: .6, stagger: .08 }, .05)
+      .from('.title__intro', { autoAlpha: 0, letterSpacing: '.6em', duration: .9, ease: 'power3.out' }, .15)
+      .from('.title__h .w > span', { yPercent: 110, duration: .9, ease: 'power4.out', stagger: .07 }, .25)
+      .add(write($('.title__script'), 1.25), .75)
+      .call(() => { siteRun = true; }, null, 1.7)
+      .to('.title__mid', { y: -60, autoAlpha: 0, duration: .6, ease: 'power2.in' }, 2.15)
+      .to('#title', { yPercent: -100, duration: 1, ease: 'expo.inOut' }, 2.2);
+    cam(2.6, 1.04, 3.6, '58% 62%');
+    move(3.6, { x: 1250, y: 640 }, .8);
+    move(4.4, { x: 760, y: 520 }, .8);
+    hover(5.2, '.badge', .7);
+    caption(3.4, 'Hero', 'A hand-lettered name, written stroke by stroke', 2.8);
+
+    /* 6.1  intro */
+    cam(6.1, 1, .6);
+    scroll(6.3, '#intro', 1.2, { offset: -30 });
+    hover(7.2, '.intro__actions .btn', 1);
+    move(8.3, () => { const p = pt('.intro__actions .btn'); return { x: p.x + 22, y: p.y + 6 }; }, .4);
+    move(8.7, () => { const p = pt('.intro__actions .btn'); return { x: p.x - 18, y: p.y - 4 }; }, .4);
+    caption(7.0, 'Intro', 'Photos rise into frame as you scroll', 2.2);
+
+    /* 9.2  words write, then the polaroids walk in, then one gets moved */
+    speed(9.2, 1.4);
+    scroll(9.2, '#what', 1.2);
+    move(9.6, { x: 1500, y: 960 }, 1);
+    cam(11.8, 1.03, 2.6);
+    caption(11.6, 'Gallery', 'Polaroids walk in like paper cut-outs', 2.8);
+    cam(14.4, 1, .5);
+    speed(14.5, 1);
+    move(14.5, '.pola--tl', .6);
+    drag(15.15, 210, 150, .7);
+    caption(14.6, 'Play', 'Pick one up and move it anywhere', 1.8);
+
+    /* 16.4  wipe to the campaign poster, then the right-to-left flash and a case study */
+    wipe(16.4, 'Every scroll<br><em>is a scene.</em>', 'cream', () => SW().__lenis.scrollTo(SD().querySelector('#work'), { immediate: true, force: true, offset: 120 }));
+    speed(17.0, 1.3);
+    cam(17.6, 1.04, 2.3, '50% 28%');
+    hover(18.4, '.wl__img--b', .6);
+    move(19.2, '.wl__word .ch:nth-child(3)', .35);
+    move(19.55, '.wl__word .ch:nth-child(8)', .45);
+    caption(18.3, 'Campaign', 'A poster that builds itself, frame by frame', 1.9);
+    cam(20.0, 1, .5);
+    scroll(20.1, '.wl__lower', 1.0, { offset: -170 });
+    caption(20.5, 'Flash', 'Then a flash sweeps the work in, right to left', 1.9);
+    speed(22.0, 1);
+    hover(22.0, '.wl__cell:nth-child(2)', .5, .5, .4);
+    click(22.6);
+    caption(22.6, 'Case study', 'Every project opens into its own story', 2.0);
+    hover(23.9, '.drawer__close', .5);
+    click(24.5);
+
+    /* 25.0  services: every photo and price visible, add one to the brief, filter */
+    scroll(25.0, '#services', 1.1, { offset: 40 });
+    hover(26.0, '.sv:nth-child(1)', .6, .45, .5);
+    move(26.6, () => pt('.sv:nth-child(1)', .72, .35), .5);
+    caption(25.6, 'Services', 'Every service with its photo, price and deliverables', 2.0);
+    scroll(27.3, '.svc__grid', .7, { offset: -150 });
+    hover(28.05, '.sv:nth-child(1) .sv__add', .4);
+    click(28.5);
+    hover(28.7, '.svc__filter[data-filter="growth"]', .4);
+    click(29.15);
+
+    /* 29.8  process: papers sway on the line and turn over */
+    const pin = () => SW().ScrollTrigger.getAll().find(t => t.pin);
+    scroll(30.0, () => pin().start, .9);
+    scroll(30.9, () => pin().start + (pin().end - pin().start) * .3, 1.0);
+    hover(31.95, () => SD().querySelectorAll('.paper')[1], .5, .5, .45);
+    click(32.5);
+    scroll(33.6, () => pin().end, 1.3, { easing: easeSine });
+    move(33.7, { x: 1560, y: 980 }, .8);
+    caption(30.4, 'Process', 'White papers that sway, then turn over to show what you get', 4.2);
+
+    /* 35.0  end card */
+    tl.to('#end', { yPercent: 0, duration: .9, ease: 'expo.inOut' }, 35.0)
+      .from('#end .row', { autoAlpha: 0, duration: .5, stagger: .1 }, 35.6)
+      .add(write($('.end__script'), 2.0), 35.7)
+      .from('.end__sub', { yPercent: 60, autoAlpha: 0, duration: .9, ease: 'power4.out' }, 37.1)
+      .from('.end__role', { autoAlpha: 0, y: 12, duration: .6 }, 37.4)
+      .from('.end__pill', { autoAlpha: 0, scale: .8, duration: .7, ease: 'back.out(2)' }, 37.7)
+      .to('#fade', { opacity: 1, duration: .6, ease: 'power1.in' }, DURATION - .6);
+    return tl;
+  }
+
+  window.__init = () => {
+    const st = SD().createElement('style');
+    st.textContent = '.booking{display:none!important}';
+    SD().head.appendChild(st);
+    document.querySelectorAll('.script[data-word]').forEach(buildScript);
+    window.__tl = build();
+    return true;
+  };
+})();
+</script>
+</body>
+</html>

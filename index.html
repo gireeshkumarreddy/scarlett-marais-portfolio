@@ -1,0 +1,1781 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scarlett Marais</title>
+<meta name="description" content="Scarlett Marais is a marketing and brand strategist in Los Angeles who builds campaigns, content and launches for fashion and beauty brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300..700&family=Imperial+Script&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+:root{
+  /* Layout: full-bleed editorial bands. Split photo hero, cream copy, cherry gallery, wine campaign poster. Copy hangs on a 4vw gutter. */
+  --cream:#F7EFEA;
+  --paper:#FFFBF8;
+  --blush:#F6D7D5;
+  --rose:#E9A6AA;
+  --red:#C1121F;
+  --red-hot:#E01A2F;
+  --wine:#6B0A12;
+  --ink:#1C0709;
+  --mist:#EBDAD5;
+  --f-display:"Instrument Serif","Bodoni 72",Didot,"Times New Roman",serif;
+  --f-script:"Imperial Script","Snell Roundhand","Brush Script MT",cursive;
+  --f-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f-poster:"Anton",Impact,"Arial Narrow",sans-serif;
+  --g:max(clamp(16px,4vw,64px),env(safe-area-inset-left,0px));
+  --gr:max(clamp(16px,4vw,64px),env(safe-area-inset-right,0px));
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--cream)}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped,html.is-locked{overflow:hidden}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f-sans);font-size:15px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+figure{margin:0}
+[hidden]{display:none!important}
+::selection{background:var(--red);color:var(--cream)}
+:focus-visible{outline:2px solid var(--red-hot);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){
+  html.has-cursor,html.has-cursor *{cursor:none!important}
+  html.has-cursor input,html.has-cursor textarea{cursor:text!important}
+}
+
+.wrap{padding-left:var(--g);padding-right:var(--gr)}
+.label{font-family:var(--f-sans);font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;line-height:1.35;margin:0}
+.eyebrow{color:var(--red)}
+.h2{font-family:var(--f-display);font-weight:400;font-size:clamp(42px,6.2vw,96px);line-height:.94;letter-spacing:-.03em;margin:0;text-wrap:balance}
+.h2 em{font-style:italic}
+.skip{position:fixed;left:12px;top:-60px;z-index:2000;background:var(--ink);color:var(--cream);padding:10px 16px;border-radius:4px}
+.skip:focus{top:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.7em;font-family:var(--f-sans);font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:1em 2.2em;border-radius:5px;position:relative;overflow:hidden;isolation:isolate;transition:color .45s var(--ease);white-space:nowrap}
+.btn::before{content:"";position:absolute;inset:0;transform:translateY(101%);transition:transform .55s var(--ease);z-index:-1}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn svg{width:13px;height:13px;flex:none}
+.btn--red{background:var(--red);color:var(--cream)}
+.btn--red::before{background:var(--ink)}
+.btn--mist{background:var(--mist);color:var(--red)}
+.btn--mist::before{background:var(--paper)}
+.btn--cream{background:var(--cream);color:var(--red)}
+.btn--cream::before{background:var(--ink)}
+.btn--cream:hover,.btn--cream:focus-visible{color:var(--cream)}
+.btn--line{border:1px solid currentColor}
+.btn--line::before{background:var(--cream)}
+.btn--line:hover{color:var(--red)}
+.link-u{background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:background-size .5s var(--ease)}
+.link-u:hover{background-size:0 1px;background-position:100% 100%}
+
+/* handwriting */
+.script{display:block;color:inherit;line-height:1}
+.script svg{display:block;width:100%;height:auto;overflow:visible}
+.script .ink{fill:currentColor}
+.script .nib{opacity:0}
+.script .nib__glow{fill:currentColor;opacity:.22}
+.script .nib__tip{fill:#fff}
+.script__fallback{font-family:var(--f-script);font-size:1em;white-space:nowrap}
+.script--inline{display:inline-block;height:1.32em;width:calc(1.32em * var(--ratio,4.2));vertical-align:calc(var(--below,.1) * -1.32em)}
+
+/* loader */
+.loader{position:fixed;inset:0;z-index:1500;background:var(--wine);color:var(--mist);display:grid;grid-template-rows:auto 1fr auto auto;padding:max(22px,env(safe-area-inset-top,0px)) var(--gr) max(22px,env(safe-area-inset-bottom,0px)) var(--g)}
+html:not(.js) .loader{display:none}
+.loader__row{display:flex;justify-content:space-between;gap:16px}
+.loader__mid{display:grid;place-items:center;align-content:center;text-align:center;gap:18px}
+.loader__num{font-family:var(--f-display);font-style:italic;font-size:clamp(110px,22vw,320px);line-height:.8;margin:0;letter-spacing:-.04em;color:var(--cream)}
+.loader__num i{font-size:.32em;vertical-align:top;margin-left:.08em}
+.loader__hint{font-family:var(--f-script);font-size:clamp(28px,3.4vw,46px);color:var(--rose);margin:0}
+.loader__bar{height:1px;background:rgba(235,218,213,.25);margin-bottom:14px}
+.loader__bar i{display:block;height:100%;background:var(--cream);transform:scaleX(0);transform-origin:left}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:950;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 18px) var(--gr) 0 var(--g);pointer-events:none}
+.nav > *{pointer-events:auto}
+.nav__mark{font-family:var(--f-script);font-size:34px;line-height:1;color:var(--cream);padding:6px 14px 2px;border-radius:999px;transition:background .5s var(--ease),color .5s var(--ease),box-shadow .5s}
+.nav__right{display:flex;align-items:center;gap:10px}
+.nav__cta{color:var(--cream);padding:12px 18px;border-radius:999px;border:1px solid rgba(247,239,234,.55);transition:background .5s var(--ease),color .5s var(--ease),border-color .5s}
+.nav__cta:hover{background:var(--cream);color:var(--red)}
+.nav__burger{width:52px;height:52px;border-radius:50%;display:grid;place-content:center;gap:5px;transition:background .5s var(--ease),box-shadow .5s}
+.nav__burger span{display:block;width:26px;height:1.5px;background:var(--cream);transition:transform .5s var(--ease),opacity .3s,background .4s}
+.past-hero .nav__mark,.past-hero .nav__burger{background:var(--cream);color:var(--red);box-shadow:0 8px 30px -10px rgba(107,10,18,.45)}
+.past-hero .nav__burger span{background:var(--red)}
+.past-hero .nav__cta{background:var(--cream);border-color:var(--cream);color:var(--red);box-shadow:0 8px 30px -10px rgba(107,10,18,.45)}
+.past-hero .nav__cta:hover{background:var(--red);border-color:var(--red);color:var(--cream)}
+.nav__burger.is-open{background:var(--cream)}
+.nav__burger.is-open span{background:var(--red)}
+.nav__burger.is-open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav__burger.is-open span:nth-child(2){opacity:0}
+.nav__burger.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* menu */
+.menu{position:fixed;inset:0;z-index:900;background:var(--red);color:var(--mist);visibility:hidden;display:grid;grid-template-rows:1fr auto;padding-top:calc(env(safe-area-inset-top,0px) + 96px);padding-bottom:max(22px,env(safe-area-inset-bottom,0px));overflow:hidden}
+.menu__inner{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;min-height:0}
+.menu__links{display:flex;flex-direction:column}
+.menu__link{font-family:var(--f-display);font-size:clamp(44px,7.4vh,96px);line-height:1;letter-spacing:-.03em;overflow:hidden;display:block;padding-bottom:.06em;width:max-content}
+.menu__link > span{display:inline-block;transition:transform .6s var(--ease),color .4s}
+.menu__link:hover > span,.menu__link:focus-visible > span{transform:translateX(.25em);color:var(--cream);font-style:italic}
+.menu__preview{justify-self:end;width:min(30vw,380px);aspect-ratio:3/4;overflow:hidden;position:relative;transform:rotate(3deg);box-shadow:0 30px 60px -20px rgba(28,7,9,.6)}
+.menu__preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s,transform 1.2s var(--ease);transform:scale(1.12)}
+.menu__preview img.on{opacity:1;transform:scale(1)}
+.menu__foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(235,218,213,.25);margin:0 var(--gr) 0 var(--g);padding-left:0;padding-right:0}
+
+/* hero */
+.hero{position:relative;height:min(100svh,58vw);min-height:560px;overflow:hidden;background:#cfc8c3;color:var(--cream)}
+.hero__media{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+.hero__img{position:relative;overflow:hidden}
+.hero__img img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover}
+.hero__img--l img{object-position:50% 25%}
+.hero__img--r img{object-position:50% 30%}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,7,9,.5) 0%,rgba(28,7,9,.14) 20%,rgba(28,7,9,0) 34%,rgba(28,7,9,0) 58%,rgba(28,7,9,.26) 100%);pointer-events:none}
+.hero .label{text-shadow:0 1px 14px rgba(28,7,9,.6),0 0 2px rgba(28,7,9,.3)}
+.hero__tag{position:absolute;left:var(--g);top:calc(env(safe-area-inset-top,0px) + clamp(92px,12vh,130px));max-width:24ch;font-size:12px}
+.hero__based{position:absolute;left:calc(50% + 2.4vw);top:48%;font-size:11px}
+.hero__role{position:absolute;right:var(--gr);top:calc(env(safe-area-inset-top,0px) + clamp(92px,12vh,130px));text-align:right;font-size:11px}
+.hero__scroll{position:absolute;right:var(--gr);bottom:22px;display:flex;align-items:center;gap:10px;z-index:3}
+.hero__scroll i{display:block;width:1px;height:38px;background:rgba(247,239,234,.4);position:relative;overflow:hidden}
+.hero__scroll i::after{content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;background:var(--cream);animation:drip 1.8s var(--ease) infinite}
+@keyframes drip{to{top:100%}}
+.hero__script{position:absolute;left:6vw;bottom:0;width:min(88vw,1560px);z-index:2;transform:translateY(calc(var(--below,.17) * 100% + 2%));pointer-events:none}
+.hero__script .script__fallback{font-size:24vw}
+.badge{position:absolute;right:calc(var(--gr) + 2vw);top:27%;width:clamp(96px,9vw,132px);aspect-ratio:1;z-index:3;display:grid;place-items:center;color:var(--cream)}
+.badge svg.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 14s linear infinite}
+.badge text{font-family:var(--f-sans);font-size:9.4px;letter-spacing:.24em;text-transform:uppercase;fill:currentColor;font-weight:600}
+.badge__heart{width:34%;color:var(--red-hot);transition:transform .5s var(--ease)}
+.badge:hover .badge__heart{transform:scale(1.25)}
+.badge::before{content:"";position:absolute;inset:12%;border-radius:50%;background:rgba(193,18,31,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* intro */
+.intro{padding-block:clamp(90px,11vw,170px) clamp(90px,10vw,150px);background:var(--cream);color:var(--red)}
+.intro__grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(40px,7vw,120px);align-items:center;max-width:1240px;margin:0 auto}
+.intro__title{font-family:var(--f-display);font-weight:400;font-size:clamp(48px,6.8vw,104px);line-height:.92;letter-spacing:-.045em;margin:18px 0 30px}
+.intro__title .line{display:block;white-space:nowrap}
+.intro__title .script--inline{margin-left:-.18em;letter-spacing:0}
+.intro__title .line > [data-rise]{display:inline-block}
+.intro__body{max-width:46ch;text-align:justify;hyphens:auto;font-size:14.5px;line-height:1.55;margin:0 0 34px;color:var(--red)}
+.intro__actions{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+.intro__actions .link-u{font-size:11.5px}
+.intro__photo{position:relative;justify-self:end;width:100%;max-width:440px}
+.intro__frame{border:1px solid var(--red);aspect-ratio:4/5;overflow:hidden;position:relative;background:var(--blush)}
+.intro__frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.intro__photo figcaption{margin-top:12px;display:flex;justify-content:space-between;gap:12px}
+.sticker{position:absolute;left:-46px;bottom:56px;width:104px;aspect-ratio:1;border-radius:50%;background:var(--red);color:var(--cream);display:grid;place-items:center;text-align:center;transform:rotate(-12deg);box-shadow:0 14px 30px -12px rgba(107,10,18,.55)}
+.sticker b{display:block;font-family:var(--f-script);font-weight:400;font-size:30px;line-height:.9}
+.sticker span{font-size:9.5px}
+
+/* what I do */
+.what{position:relative;min-height:clamp(700px,100vh,960px);display:grid;place-items:center;text-align:center;color:var(--mist);background:radial-gradient(120% 70% at 50% 35%,#cf1626 0%,rgba(207,22,38,0) 60%),linear-gradient(180deg,var(--red) 0%,#a80f1c 62%,#8a0c17 100%);overflow:hidden;padding-block:120px}
+.what__inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;max-width:900px;padding-inline:16px}
+.what__eyebrow{margin-bottom:18px;min-height:1.4em}
+.what__eyebrow .caret{display:inline-block;width:1px;height:1.1em;background:currentColor;vertical-align:-.2em;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.what__title{font-family:var(--f-display);font-weight:400;font-size:clamp(58px,8.6vw,138px);line-height:.88;letter-spacing:-.05em;margin:0;color:var(--mist);text-shadow:0 2px 30px rgba(107,10,18,.25)}
+.what__title .row{display:block;white-space:nowrap}
+.what__title .ch{display:inline-block}
+.what__script{width:clamp(250px,36vw,560px);margin:-.06em auto 0;transform:translateX(-4%);color:var(--mist)}
+.what__script .script__fallback{font-size:clamp(70px,10vw,160px)}
+.what .btn{margin-top:30px}
+.what__hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);color:rgba(235,218,213,.75);z-index:1}
+.pola{position:absolute;z-index:2;width:clamp(124px,15vw,232px);padding:clamp(7px,.8vw,12px) clamp(7px,.8vw,12px) 0;background:var(--paper);box-shadow:0 1px 0 rgba(0,0,0,.05),0 22px 34px -14px rgba(40,0,6,.6),7px 10px 0 rgba(70,0,10,.2);user-select:none;-webkit-user-select:none;touch-action:none;will-change:transform}
+.pola__photo{aspect-ratio:1/1.06;overflow:hidden;background:#d9d0cc}
+.pola__photo img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.pola--bw .pola__photo img{filter:grayscale(1) contrast(1.06)}
+.pola figcaption{font-family:var(--f-script);font-size:clamp(17px,1.75vw,27px);line-height:1;color:var(--red);text-align:center;padding:.32em 0 .42em}
+.pola__tape{position:absolute;top:-11px;left:50%;width:44%;height:22px;transform:translateX(-50%) rotate(-5deg);background:repeating-linear-gradient(-45deg,rgba(246,215,213,.92) 0 6px,rgba(255,251,248,.8) 6px 12px);box-shadow:0 1px 3px rgba(0,0,0,.12);clip-path:polygon(3% 0,97% 4%,100% 50%,96% 100%,2% 96%,0 50%)}
+.pola--tl{left:4.5%;top:9%;transform:rotate(-9deg)}
+.pola--tr{right:5%;top:11%;transform:rotate(7deg)}
+.pola--bl{left:8%;bottom:10%;transform:rotate(6deg)}
+.pola--br{right:4%;bottom:8%;transform:rotate(-7deg)}
+
+/* marquees */
+.mq{overflow:hidden;white-space:nowrap;position:relative}
+.mq__track{display:inline-flex;will-change:transform}
+.mq__item{display:inline-flex;align-items:center;gap:.9em;padding-right:.9em}
+.mq--thin{background:var(--mist);color:var(--red);padding-block:12px;border-block:1px solid rgba(193,18,31,.25)}
+.mq--thin .mq__item{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
+.mq--thin i{font-style:normal;color:var(--red-hot)}
+.mq--brands{background:var(--red);color:var(--mist);padding-block:clamp(22px,3vw,40px)}
+.mq--brands .mq__item{font-size:clamp(30px,4vw,58px);line-height:1;gap:.6em;padding-right:.6em}
+.mq--brands .b1{font-family:var(--f-display);font-style:italic;letter-spacing:-.02em}
+.mq--brands .b2{font-family:var(--f-poster);text-transform:uppercase;letter-spacing:.01em;font-size:.82em}
+.mq--brands .b3{font-family:var(--f-script);font-size:1.1em}
+.mq--brands .b4{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.08em;font-size:.7em}
+.mq--brands svg{width:.42em;height:.42em;color:var(--rose);flex:none}
+
+/* numbers */
+.nums{padding-block:clamp(90px,10vw,150px);background:var(--cream)}
+.nums__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:clamp(40px,6vw,80px)}
+.nums__head p:last-child{max-width:44ch;justify-self:end;margin:0;color:#5b2a2e}
+.nums__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.stat{background:var(--paper);padding:clamp(22px,2.4vw,34px);position:relative;overflow:hidden;transition:translate .6s var(--ease),rotate .6s var(--ease),background .5s,color .5s}
+.stat:hover{translate:0 -6px;rotate:-1deg;background:var(--red);color:var(--cream)}
+.stat__n{font-family:var(--f-display);font-size:clamp(58px,6.6vw,108px);line-height:.9;letter-spacing:-.04em;color:var(--red);display:block;font-variant-numeric:tabular-nums;transition:color .5s}
+.stat:hover .stat__n{color:var(--cream)}
+.stat p{margin:16px 0 0;font-size:14px;line-height:1.45;max-width:24ch}
+.stat .label{display:block;margin-top:22px;opacity:.7}
+
+/* wonderland campaign */
+.wl{background:var(--wine);color:var(--cream);position:relative}
+.wl__top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-block:20px}
+.wl__top > :last-child{justify-self:end}
+.wl__results{display:inline-flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .3s}
+.wl__results:hover{border-color:currentColor}
+.wl__results i{width:7px;height:7px;border-radius:50%;background:var(--red-hot);box-shadow:0 0 0 0 rgba(224,26,47,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(224,26,47,0)}100%{box-shadow:0 0 0 0 rgba(224,26,47,0)}}
+.wl__lines{display:grid;gap:4px;justify-items:center}
+.wl__lines i{display:block;width:24px;height:1.5px;background:currentColor}
+.wl__stage{position:relative;padding-top:39vw}
+.wl__img{position:absolute;overflow:hidden;background:#4a070c}
+.wl__img img{width:100%;height:100%;object-fit:cover}
+.wl__img--a{left:var(--g);top:.5vw;width:10vw;aspect-ratio:69/80}
+.wl__img--b{left:50%;top:8vw;width:29vw;aspect-ratio:197/249;transform:translateX(-50%)}
+.wl__img--c{right:var(--gr);top:20vw;width:10vw;aspect-ratio:69/80}
+.wl__lbls{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.wl__lbls > :nth-child(2){margin-right:auto;margin-left:6vw}
+.wl__word{position:relative;z-index:3;margin:0;font-family:var(--f-poster);font-weight:400;font-size:20.4vw;line-height:.78;letter-spacing:-.005em;text-transform:uppercase;color:var(--paper);white-space:nowrap;overflow:hidden;padding-top:.06em;text-align:center}
+.wl__word-in{display:inline-block}
+.wl__word .ch{display:inline-block;transition:color .35s,translate .5s var(--ease)}
+.wl__word .ch:hover{color:var(--red-hot);translate:0 -4%}
+.wl__lower{position:relative;overflow:hidden}
+.wl__band{background:var(--paper);color:var(--ink);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) auto;align-items:end;gap:24px;padding-block:clamp(26px,4.2vw,58px) clamp(14px,1.4vw,20px)}
+.wl__coll{font-family:var(--f-poster);font-weight:400;font-size:clamp(34px,5.2vw,80px);line-height:.88;margin:0;text-transform:uppercase}
+.wl__band p{font-weight:600}
+.wl__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--ink)}
+.wl__cell{position:relative;aspect-ratio:3/4;overflow:hidden;display:block;background:#2a0a0d}
+.wl__cell-link{position:absolute;inset:0;display:block}
+.wl__cell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease),filter .6s}
+.wl__cell:hover img{transform:scale(1.07)}
+.wl__flashcell{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:3}
+.wl__meta{position:absolute;inset:auto 0 0 0;padding:18px;color:var(--cream);background:linear-gradient(0deg,rgba(28,7,9,.85),rgba(28,7,9,0));transform:translateY(101%);transition:transform .6s var(--ease);z-index:2;display:grid;gap:4px}
+.wl__cell:hover .wl__meta,.wl__cell:focus-visible .wl__meta{transform:none}
+.wl__meta b{font-family:var(--f-display);font-weight:400;font-size:clamp(24px,2.2vw,34px);line-height:1}
+.wl__cta{position:absolute;left:12px;right:12px;bottom:12px;z-index:4;background:var(--paper);color:var(--ink);display:flex;justify-content:space-between;align-items:center;padding:12px 14px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:background .4s,color .4s}
+.wl__cta:hover{background:var(--red);color:var(--cream)}
+.wl__cell--last .wl__meta{bottom:56px}
+.wl__foot{background:#0d0304;color:var(--cream);display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding-block:18px 22px}
+.wl__foot p{max-width:62ch}
+.wl__foot p:last-child{text-align:right;opacity:.7}
+.wl__flash{position:absolute;top:-10%;bottom:-10%;width:42%;left:100%;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.95) 45%,rgba(255,240,240,.9) 55%,rgba(255,255,255,0));transform:skewX(-14deg);z-index:6;pointer-events:none;mix-blend-mode:screen;opacity:0}
+
+/* drawer */
+.drawer{position:fixed;inset:0;z-index:1200;visibility:hidden}
+.drawer__scrim{position:absolute;inset:0;background:rgba(28,7,9,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.drawer__panel{position:absolute;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--cream);color:var(--ink);overflow-y:auto;overscroll-behavior:contain;padding:calc(env(safe-area-inset-top,0px) + 26px) max(28px,env(safe-area-inset-right,0px)) max(40px,env(safe-area-inset-bottom,0px)) 28px}
+.drawer__close{display:flex;margin-left:auto;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--ink);border-radius:999px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.drawer__close:hover{background:var(--ink);color:var(--cream)}
+.drawer__title{font-family:var(--f-display);font-weight:400;font-size:clamp(54px,8vw,86px);line-height:.9;letter-spacing:-.04em;margin:18px 0 8px;color:var(--red)}
+.drawer__img{aspect-ratio:16/10;overflow:hidden;margin:22px 0}
+.drawer__img img{width:100%;height:100%;object-fit:cover}
+.drawer__cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.drawer__cols p{margin:6px 0 0;font-size:14px;line-height:1.55}
+.drawer__results{list-style:none;padding:0;margin:28px 0;display:grid;gap:10px}
+.drawer__results li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline;background:var(--paper);padding:14px 18px}
+.drawer__results b{font-family:var(--f-display);font-weight:400;font-size:42px;line-height:1;color:var(--red);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+
+/* services */
+.svc{padding-block:clamp(90px,11vw,170px);background:var(--cream)}
+.svc__head{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(32px,5vw,80px);align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.svc__head .h2 em{color:var(--red)}
+.svc__side > p{margin:0 0 18px;max-width:42ch;color:#5b2a2e}
+.svc__side b{color:var(--red);font-weight:600}
+.svc__filters{display:flex;flex-wrap:wrap;gap:8px}
+.svc__filter{padding:10px 16px;border-radius:999px;border:1px solid rgba(193,18,31,.4);color:var(--red);font-size:13px;font-weight:500;transition:background .35s,color .35s,border-color .35s}
+.svc__filter sup{font-size:10px;margin-left:3px;opacity:.7}
+.svc__filter:hover{border-color:var(--red)}
+.svc__filter.is-on{background:var(--red);color:var(--cream);border-color:var(--red)}
+.svc__brief{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:10px 16px 10px 10px;border-radius:999px;background:var(--ink);color:var(--cream);transition:background .3s}
+.svc__brief:hover{background:var(--red)}
+.svc__brief b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--red-hot);font-size:11.5px;font-variant-numeric:tabular-nums}
+.svc__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,1.8vw,28px);align-items:stretch}
+.sv{position:relative;background:var(--paper);padding:12px 12px 0;display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(107,10,18,.06),0 26px 40px -30px rgba(107,10,18,.5);will-change:transform}
+.sv__img{position:relative;aspect-ratio:5/4;overflow:hidden;background:var(--blush)}
+.sv__img img{position:absolute;left:-5%;top:-5%;width:110%;height:110%;max-width:none;object-fit:cover}
+.sv__cat{position:absolute;left:12px;top:12px;z-index:2;background:var(--cream);color:var(--red);padding:7px 11px;border-radius:999px}
+.sv__shine{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,30%),rgba(255,255,255,.4),rgba(255,255,255,0) 46%);opacity:0;transition:opacity .4s}
+.sv:hover .sv__shine{opacity:1}
+.sv__body{padding:20px 10px 18px;display:flex;flex-direction:column;flex:1}
+.sv__title{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.sv__title h3{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,2.3vw,38px);line-height:1;letter-spacing:-.025em;margin:0}
+.sv__price{margin:0;font-family:var(--f-display);font-size:25px;line-height:1;color:var(--red);white-space:nowrap}
+.sv__price small{font-family:var(--f-sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px;color:var(--ink);opacity:.6}
+.sv__tags{color:var(--red);margin:10px 0 12px}
+.sv__desc{margin:0 0 16px;font-size:14.5px;line-height:1.55;color:#3c1a1d}
+.chips-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0 0 18px;padding:0}
+.chips-list li{border:1px solid rgba(193,18,31,.4);color:var(--red);border-radius:999px;padding:6px 12px;font-size:12px}
+.sv__foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;border-top:1px dashed rgba(193,18,31,.3)}
+.sv__foot .label{color:#7a3a3f}
+.sv__add{display:inline-flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-radius:999px;border:1px solid var(--red);color:var(--red);font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;transition:background .35s,color .35s}
+.sv__add i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--red);color:var(--cream);font-style:normal;font-size:16px;line-height:1;transition:transform .45s var(--ease),background .35s,color .35s}
+.sv__add:hover{background:var(--blush)}
+.sv__add[aria-pressed="true"]{background:var(--red);color:var(--cream)}
+.sv__add[aria-pressed="true"] i{background:var(--cream);color:var(--red);transform:rotate(45deg)}
+
+/* process */
+.proc{background:var(--blush);color:var(--ink);overflow:hidden}
+.proc__pin{min-height:100vh;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2vw,30px);padding-block:clamp(76px,7vw,100px) clamp(30px,3vw,50px)}
+.proc__head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.proc__head .h2 em{color:var(--red)}
+.proc__head p.label{color:#7a3a3f}
+.proc__track{position:relative;display:flex;gap:clamp(18px,2.2vw,36px);width:max-content;padding:66px var(--gr) 26px var(--g)}
+.proc__thread{position:absolute;left:0;top:16px;height:60px;pointer-events:none}
+.proc__thread path{fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round}
+.proc__card{position:relative;flex:none;width:clamp(290px,25vw,460px)}
+.proc__pin-peg{position:absolute;left:50%;top:-34px;width:16px;height:52px;margin-left:-8px;border-radius:4px;background:linear-gradient(90deg,#d9474f,#f08b90 50%,#d9474f);box-shadow:0 3px 6px rgba(107,10,18,.3);z-index:4}
+.proc__pin-peg::after{content:"";position:absolute;left:50%;top:22px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--paper)}
+.paper{position:relative;height:clamp(430px,58vh,560px);transform-origin:50% -18px;perspective:1600px;cursor:pointer}
+.paper:focus-visible{outline:2px solid var(--red-hot);outline-offset:6px}
+.paper__inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .95s var(--ease)}
+.paper.is-turned .paper__inner{transform:rotateY(180deg)}
+.paper__face{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;background:var(--paper);padding:clamp(20px,1.8vw,28px);display:flex;flex-direction:column;box-shadow:0 26px 40px -24px rgba(107,10,18,.5);overflow:hidden}
+.paper__face::after{content:"";position:absolute;right:0;bottom:0;width:36px;height:36px;background:linear-gradient(135deg,rgba(0,0,0,0) 50%,#efe3de 50%);box-shadow:-3px -3px 8px rgba(107,10,18,.08)}
+.paper__back{transform:rotateY(180deg);background:#fff9f6 repeating-linear-gradient(180deg,transparent 0 31px,rgba(193,18,31,.12) 31px 32px)}
+.paper__top{display:flex;justify-content:space-between;align-items:flex-start}
+.paper__top .label{color:var(--red);margin-top:6px}
+.proc__num{font-family:var(--f-display);font-style:italic;font-size:clamp(60px,5vw,88px);line-height:.8;color:var(--red);letter-spacing:-.04em}
+.paper__photo{position:relative;margin:16px 6px 18px;flex:1;min-height:110px;background:#fff;padding:8px 8px 30px;box-shadow:0 12px 26px -12px rgba(28,7,9,.5);transform:rotate(-2deg)}
+.paper__photo img{width:100%;height:100%;object-fit:cover;display:block}
+.paper__photo figcaption{position:absolute;left:0;right:0;bottom:4px;text-align:center;font-family:var(--f-script);font-size:22px;line-height:1;color:var(--red)}
+.paper__photo::before{content:"";position:absolute;top:-10px;left:50%;width:76px;height:20px;margin-left:-38px;z-index:2;background:repeating-linear-gradient(-45deg,rgba(246,215,213,.95) 0 6px,rgba(255,251,248,.85) 6px 12px);transform:rotate(3deg);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.paper h3{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,2.5vw,40px);line-height:1;letter-spacing:-.02em;margin:0 0 8px}
+.paper p{margin:0;font-size:14px;line-height:1.5}
+.paper__turn{margin-top:14px;color:var(--red);display:inline-flex;gap:8px;align-items:center}
+.paper__turn i{font-style:normal;font-size:16px;display:inline-block;transition:transform .5s var(--ease)}
+.paper:hover .paper__turn i{transform:rotate(180deg)}
+.paper__back > .label{color:var(--red);margin-bottom:10px}
+.checks{list-style:none;margin:8px 0 18px;padding:0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:center;font-size:15px;line-height:1.3}
+.checks li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5.5 12.5l4.2 4.2L18.5 8' fill='none' stroke='%23F7EFEA' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/13px no-repeat}
+.paper__stat{margin-top:auto!important;padding-top:14px;border-top:1px dashed rgba(193,18,31,.35)}
+.paper__stat b{display:block;font-family:var(--f-display);font-weight:400;font-size:46px;line-height:1;color:var(--red);letter-spacing:-.03em}
+.paper--end{background:var(--red);color:var(--cream);padding:clamp(26px,2.4vw,38px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;cursor:default;box-shadow:0 26px 40px -24px rgba(107,10,18,.5)}
+.paper--end h3{font-size:clamp(42px,3.8vw,62px);margin:18px 0 24px}
+
+/* about */
+.about{padding-block:clamp(100px,12vw,180px);background:var(--cream)}
+.about__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,7vw,120px);align-items:center;max-width:1280px;margin:0 auto}
+.about__photo{position:relative;max-width:470px;width:100%}
+.about__photo::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:1px solid var(--red);z-index:0}
+.about__frame{position:relative;z-index:1;aspect-ratio:4/5;overflow:hidden;background:var(--blush)}
+.about__frame img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover}
+.about__photo .pola__tape{top:-12px;z-index:2;width:34%}
+.about__copy .h2{color:var(--red);margin:16px 0 26px}
+.about__copy > p{max-width:52ch;margin:0 0 30px;font-size:15.5px}
+.facts{list-style:none;margin:0 0 36px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.facts li{display:flex;gap:12px;align-items:flex-start;background:var(--paper);padding:14px 16px;font-size:14px;line-height:1.4;transition:translate .5s var(--ease)}
+.facts li:hover{translate:0 -3px}
+.facts svg{flex:none;width:16px;height:16px;color:var(--red);margin-top:2px}
+.sign{display:flex;align-items:flex-end;gap:18px;color:var(--red)}
+.sign .script{width:clamp(180px,20vw,280px)}
+.sign .script__fallback{font-size:64px}
+
+/* notes */
+.notes{padding-block:clamp(100px,11vw,170px);background:var(--paper);overflow:hidden}
+.notes__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,100px);align-items:center;max-width:1280px;margin:0 auto}
+.notes__intro .h2{margin:16px 0 22px}
+.notes__intro .h2 em{color:var(--red)}
+.notes__intro > p{max-width:40ch;margin:0 0 30px;color:#5b2a2e}
+.notes__ctrl{display:flex;align-items:center;gap:16px}
+.notes__ctrl button{width:54px;height:54px;border-radius:50%;border:1px solid var(--red);color:var(--red);display:grid;place-items:center;transition:background .4s,color .4s}
+.notes__ctrl button:hover{background:var(--red);color:var(--cream)}
+.notes__ctrl svg{width:18px;height:18px}
+.notes__count{font-variant-numeric:tabular-nums;color:var(--red);min-width:5ch;text-align:center}
+.notes__stack{position:relative;height:clamp(400px,38vw,470px);max-width:560px;width:100%;justify-self:center}
+.note{position:absolute;inset:0;padding:clamp(28px,3.4vw,46px);display:flex;flex-direction:column;background:#fff6f4 repeating-linear-gradient(180deg,transparent 0 33px,rgba(193,18,31,.12) 33px 34px);box-shadow:0 2px 0 rgba(0,0,0,.03),0 30px 50px -26px rgba(107,10,18,.5);cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.note:nth-child(2){background-color:#fdeceb}
+.note:nth-child(3){background-color:var(--paper)}
+.note:nth-child(4){background-color:#fbe3e1}
+.note__seal{position:absolute;right:26px;top:-22px;width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e8323f,var(--red) 55%,#8d0c16);display:grid;place-items:center;color:#ffd9dc;box-shadow:0 6px 14px -4px rgba(107,10,18,.6);transform:rotate(12deg)}
+.note__seal svg{width:24px;height:24px}
+.note__hearts{color:var(--red);letter-spacing:.2em;font-size:13px;margin:0 0 18px}
+.note__q{font-family:var(--f-display);font-size:clamp(25px,2.4vw,35px);line-height:1.14;letter-spacing:-.015em;margin:0 0 auto;color:var(--ink)}
+.note__who{display:flex;flex-direction:column;gap:4px;margin-top:22px}
+.note__who b{font-family:var(--f-script);font-weight:400;font-size:36px;line-height:1;color:var(--red)}
+
+/* moodboard */
+.mood{padding-block:0 clamp(100px,11vw,160px);background:var(--paper)}
+.mood__head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}
+.mood__head h2{font-family:var(--f-display);font-weight:400;font-size:clamp(34px,4vw,56px);line-height:1;margin:6px 0 0;letter-spacing:-.03em}
+.mood__head h2 em{color:var(--red)}
+.mood__grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(8px,1vw,14px)}
+.mood__tile{position:relative;aspect-ratio:4/5;overflow:hidden;display:block;width:100%;background:var(--blush)}
+.mood__tile:nth-child(even){margin-top:clamp(18px,3vw,46px)}
+.mood__tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.mood__tile:hover img{transform:scale(1.08)}
+.mood__tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,7,9,.55),rgba(28,7,9,0) 45%);opacity:.0;transition:opacity .4s}
+.mood__tile:hover::after,.mood__tile[aria-pressed="true"]::after{opacity:1}
+.mood__like{position:absolute;left:12px;bottom:10px;z-index:2;display:flex;align-items:center;gap:6px;color:var(--cream);font-size:13px;font-weight:600;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s var(--ease)}
+.mood__tile:hover .mood__like,.mood__tile[aria-pressed="true"] .mood__like,.mood__tile:focus-visible .mood__like{opacity:1;transform:none}
+.mood__like svg{width:18px;height:18px}
+.mood__tile[aria-pressed="true"] .mood__like svg{color:var(--red-hot)}
+.mood__tile[aria-pressed="true"] .mood__like svg path{fill:currentColor}
+
+/* contact */
+.contact{background:var(--red);color:var(--cream);padding-block:clamp(100px,11vw,170px);position:relative;overflow:hidden}
+.contact__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);max-width:1320px;margin:0 auto;align-items:start}
+.contact .eyebrow{color:var(--blush);display:inline-flex;align-items:center;gap:10px}
+.contact .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--cream);animation:pulse 1.8s infinite}
+.contact__title{font-family:var(--f-display);font-weight:400;font-size:clamp(50px,6.4vw,104px);line-height:.92;letter-spacing:-.04em;margin:18px 0 6px}
+.contact__script{width:min(100%,560px);margin:-.02em 0 26px -1%}
+.contact__script .script__fallback{font-size:clamp(60px,8vw,120px)}
+.contact__lead{max-width:44ch;margin:0 0 34px;color:var(--blush);font-size:15.5px}
+.direct{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.direct .label{color:var(--blush)}
+.copy{display:inline-flex;align-items:center;gap:14px;font-family:var(--f-display);font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-.01em;user-select:text;-webkit-user-select:text}
+.copy span{font-family:var(--f-sans);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:6px 10px;border-radius:999px;border:1px solid currentColor;transition:background .3s,color .3s}
+.copy:hover span{background:var(--cream);color:var(--red)}
+.form{display:grid;gap:22px;background:rgba(107,10,18,.28);padding:clamp(22px,3vw,40px);border:1px solid rgba(247,239,234,.18)}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.field{position:relative}
+.field input,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(247,239,234,.45);color:var(--cream);font:inherit;font-size:16px;padding:22px 0 10px;outline:none;transition:border-color .3s;border-radius:0;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--cream)}
+.field label{position:absolute;left:0;top:22px;color:var(--blush);font-size:15px;pointer-events:none;transition:transform .35s var(--ease),font-size .35s,color .3s;transform-origin:0 0}
+.field input:focus + label,.field input:not(:placeholder-shown) + label,.field textarea:focus + label,.field textarea:not(:placeholder-shown) + label{transform:translateY(-20px);font-size:11px;letter-spacing:.09em;text-transform:uppercase}
+.field.is-bad input{border-color:#ffd0d4}
+.field.is-bad label{color:#ffd0d4}
+.chips{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips legend{color:var(--blush);margin-bottom:10px;padding:0;width:100%}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0}
+.chip span{display:inline-block;padding:9px 15px;border-radius:999px;border:1px solid rgba(247,239,234,.5);font-size:13px;transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.chip:hover span{border-color:var(--cream)}
+.chip input:checked + span{background:var(--cream);color:var(--red);border-color:var(--cream)}
+.chip input:focus-visible + span{outline:2px solid var(--cream);outline-offset:2px}
+.form__foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.form__err{margin:0;color:#ffd0d4;font-size:13.5px;min-height:1em}
+.done{background:var(--cream);color:var(--ink);padding:clamp(22px,3vw,40px)}
+.done__title{font-family:var(--f-display);font-weight:400;font-size:clamp(34px,3.6vw,52px);line-height:1;letter-spacing:-.02em;margin:10px 0 12px;color:var(--red)}
+.done p{margin:0 0 16px}
+.done b{font-weight:600;user-select:all}
+.done textarea{width:100%;font:13.5px/1.5 var(--f-sans);background:var(--paper);border:1px solid rgba(193,18,31,.25);padding:14px;color:var(--ink);resize:vertical;margin-bottom:16px}
+.done__actions{display:flex;gap:12px;flex-wrap:wrap}
+.done .btn--line{color:var(--red)}
+.done .btn--line::before{background:var(--red)}
+.done .btn--line:hover{color:var(--cream)}
+
+/* footer */
+.foot{background:var(--wine);color:var(--mist);padding-top:clamp(70px,8vw,120px);overflow:hidden}
+.foot__big{display:flex;align-items:flex-end;gap:2vw;flex-wrap:wrap}
+.foot__script{width:min(66vw,1000px);color:var(--cream)}
+.foot__script .script__fallback{font-size:18vw}
+.foot__sub{font-family:var(--f-display);font-size:clamp(46px,8vw,130px);line-height:.8;letter-spacing:-.04em;margin:0 0 .12em;display:flex;flex-direction:column;gap:14px}
+.foot__sub .label{color:var(--rose);letter-spacing:.12em}
+.foot__cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:32px;padding-block:clamp(50px,6vw,80px) 40px;border-bottom:1px solid rgba(235,218,213,.2);margin:clamp(30px,4vw,60px) var(--gr) 0 var(--g);padding-left:0;padding-right:0}
+.foot__cols ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:6px}
+.foot__cols .label{color:var(--rose)}
+.foot__cols a,.foot__cols p{font-family:var(--f-display);font-size:24px;line-height:1.2;margin:14px 0 0}
+.foot__cols ul a{font-size:24px}
+.foot__cols p.label{font-family:var(--f-sans);font-size:11.5px;margin:0}
+.foot__cols a:hover{color:var(--cream);font-style:italic}
+.totop{display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:var(--cream);color:var(--red);text-align:center;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1.3;transition:background .4s,color .4s}
+.totop:hover{background:var(--red-hot);color:var(--cream)}
+.totop svg{width:18px;height:18px;margin:0 auto 4px}
+.foot__legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px max(22px,env(safe-area-inset-bottom,0px));color:rgba(235,218,213,.6)}
+
+/* floating ui */
+.progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:1000;pointer-events:none}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--rose),var(--red-hot));transform:scaleX(0);transform-origin:left}
+.booking{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:800;display:inline-flex;align-items:center;gap:10px;background:var(--cream);color:var(--red);padding:11px 16px;border-radius:999px;box-shadow:0 14px 34px -14px rgba(107,10,18,.55);transform:translateY(160%);transition:transform .7s var(--ease),background .3s,color .3s}
+.booking i{width:8px;height:8px;border-radius:50%;background:#2fb26a;box-shadow:0 0 0 0 rgba(47,178,106,.6);animation:pulseg 1.8s infinite}
+@keyframes pulseg{70%{box-shadow:0 0 0 8px rgba(47,178,106,0)}}
+.past-hero .booking{transform:none}
+.past-hero.at-contact .booking{transform:translateY(160%)}
+.booking:hover{background:var(--red);color:var(--cream)}
+.toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));z-index:1400;transform:translate(-50%,180%);background:var(--ink);color:var(--cream);padding:12px 20px;border-radius:999px;font-size:13.5px;transition:transform .6s var(--ease);pointer-events:none}
+.toast.on{transform:translate(-50%,0)}
+.cursor{position:fixed;left:0;top:0;z-index:3000;pointer-events:none;display:none}
+html.has-cursor .cursor{display:block}
+.cursor__dot,.cursor__ring{position:fixed;left:0;top:0;border-radius:50%;pointer-events:none}
+.cursor__dot{width:9px;height:9px;margin:-4.5px 0 0 -4.5px;background:var(--red-hot);box-shadow:0 0 0 1.5px var(--cream)}
+.cursor__ring{width:40px;height:40px;margin:-20px 0 0 -20px;border:1px solid rgba(247,239,234,.85);box-shadow:0 0 0 1px rgba(193,18,31,.5),inset 0 0 0 1px rgba(193,18,31,.25);display:grid;place-items:center;transition:width .45s var(--ease),height .45s var(--ease),margin .45s var(--ease),background .4s,border-color .4s}
+.cursor__ring b{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--cream);opacity:0;transition:opacity .3s}
+.cursor.is-link .cursor__ring{width:62px;height:62px;margin:-31px 0 0 -31px;background:rgba(224,26,47,.12)}
+.cursor.is-label .cursor__ring{width:86px;height:86px;margin:-43px 0 0 -43px;background:var(--red);border-color:var(--red)}
+.cursor.is-label .cursor__ring b{opacity:1}
+.cursor.is-label .cursor__dot{opacity:0}
+.fx{position:fixed;left:0;top:0;pointer-events:none;z-index:2500;width:18px;height:18px;margin:-9px 0 0 -9px}
+.fx svg{width:100%;height:100%;display:block}
+
+/* responsive */
+@media (max-width:1000px){
+  .nums__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .svc__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot__cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .intro__grid,.about__grid,.notes__grid,.contact__grid,.svc__head,.nums__head{grid-template-columns:minmax(0,1fr)}
+  .intro__photo{justify-self:center}
+  .nums__head p:last-child{justify-self:start}
+  .proc__pin{min-height:0}
+  .proc__track{flex-direction:column;width:auto;padding-top:56px;gap:58px}
+  .proc__card{width:100%}
+  .paper{height:560px}
+  .proc__thread{display:none}
+  .menu__inner{grid-template-columns:1fr}
+  .menu__preview{display:none}
+  .notes__stack{height:440px}
+  .mood__grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mood__tile:nth-child(even){margin-top:0}
+  .mood__tile:nth-child(3n+2){margin-top:24px}
+  .wl__band{grid-template-columns:1fr auto}
+  .wl__band > :nth-child(2){grid-row:2;grid-column:1 / -1}
+}
+@media (max-width:700px){
+  body{font-size:14.5px}
+  .hero{height:auto;min-height:0;aspect-ratio:auto}
+  .hero{height:88svh;min-height:560px}
+  .hero__tag{font-size:10.5px;max-width:20ch}
+  .hero__role{display:none}
+  .hero__based{left:calc(50% + 12px);top:auto;bottom:46%}
+  .hero__script{left:2vw;width:96vw}
+  .badge{top:auto;bottom:24%;right:12px;width:80px}
+  .nav__cta{display:none}
+  .intro__title{font-size:clamp(40px,12.5vw,64px)}
+  .intro__title .line{white-space:normal}
+  .sticker{left:-8px;bottom:-20px;width:88px}
+  .what{min-height:900px;padding-block:250px}
+  .what__title{font-size:clamp(46px,14.5vw,72px)}
+  .what__script{width:min(72vw,330px)}
+  .pola{width:31vw}
+  .pola--tl{left:3%;top:3%}
+  .pola--tr{right:4%;top:4.5%}
+  .pola--bl{left:5%;bottom:5%}
+  .pola--br{right:3%;bottom:3.5%}
+  .what__hint{bottom:auto;top:50%;display:none}
+  .wl__stage{padding-top:70vw}
+  .wl__img--a{width:22vw;top:2vw}
+  .wl__img--b{width:50vw;top:8vw}
+  .wl__img--c{width:22vw;top:38vw}
+  .wl__lbls{font-size:9px}
+  .wl__lbls .label{font-size:9px}
+  .wl__lbls > :nth-child(2){display:none}
+  .wl__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wl__foot{flex-direction:column}
+  .wl__foot p:last-child{text-align:left}
+  .wl__top .label{font-size:10px}
+  .svc__grid{grid-template-columns:minmax(0,1fr)}
+  .facts{grid-template-columns:1fr}
+  .form__row{grid-template-columns:1fr}
+  .foot__cols{grid-template-columns:1fr 1fr}
+  .foot__script{width:92vw}
+  .loader__row .label:last-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#intro">Skip to content</a>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader__row"><span class="label">Scarlett Marais</span><span class="label">Portfolio ’26</span></div>
+  <div class="loader__mid">
+    <p class="loader__num"><b>00</b><i>%</i></p>
+    <p class="loader__hint">getting camera-ready</p>
+  </div>
+  <div class="loader__bar"><i></i></div>
+  <div class="loader__row"><span class="label">Marketing &amp; brand strategy</span><span class="label">Los Angeles</span></div>
+</div>
+
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<nav class="nav" aria-label="Site">
+  <a href="#top" class="nav__mark magnetic" aria-label="Scarlett Marais, back to top">SM</a>
+  <div class="nav__right">
+    <a href="#contact" class="nav__cta label magnetic">Let’s talk</a>
+    <button class="nav__burger magnetic" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__inner wrap">
+    <nav class="menu__links" aria-label="Main">
+      <a href="#top" class="menu__link" data-preview="0"><span>Home</span></a>
+      <a href="#work" class="menu__link" data-preview="1"><span>Selected work</span></a>
+      <a href="#services" class="menu__link" data-preview="2"><span>Services</span></a>
+      <a href="#process" class="menu__link" data-preview="3"><span>Process</span></a>
+      <a href="#about" class="menu__link" data-preview="4"><span>About me</span></a>
+      <a href="#notes" class="menu__link" data-preview="5"><span>Love notes</span></a>
+      <a href="#contact" class="menu__link" data-preview="0"><span>Contact</span></a>
+    </nav>
+    <figure class="menu__preview" aria-hidden="true">
+      <img class="on" src="https://images.unsplash.com/photo-1762331973660-76b96e28ab1d?auto=format&fit=crop&w=700&q=75" alt="">
+      <img src="https://images.unsplash.com/photo-1728857442002-5fdf4bcebde2?auto=format&fit=crop&w=700&q=75" alt="">
+      <img src="https://images.unsplash.com/photo-1762331968158-7a8bd46f4e69?auto=format&fit=crop&w=700&q=75" alt="">
+      <img src="https://images.unsplash.com/photo-1762331957565-e7a22f893403?auto=format&fit=crop&w=700&q=75" alt="">
+      <img src="https://images.unsplash.com/photo-1762331973070-8195d94e54a6?auto=format&fit=crop&w=700&q=75" alt="">
+      <img src="https://images.unsplash.com/photo-1706821722700-842cb7329a08?auto=format&fit=crop&w=700&q=75" alt="">
+    </figure>
+  </div>
+  <div class="menu__foot label">
+    <span>hello@scarlettmarais.com</span>
+    <span>Instagram · TikTok · LinkedIn</span>
+    <span>Los Angeles · <b class="clock">--:--</b></span>
+  </div>
+</div>
+
+<main>
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero__media">
+    <figure class="hero__img hero__img--l"><img src="https://images.unsplash.com/photo-1762331977765-107206a473aa?auto=format&fit=crop&w=1300&q=80" alt="Scarlett in oversized sunglasses and a red blazer" fetchpriority="high"></figure>
+    <figure class="hero__img hero__img--r"><img src="https://images.unsplash.com/photo-1762331973660-76b96e28ab1d?auto=format&fit=crop&w=1300&q=80" alt="Scarlett standing on a rooftop in a red blazer" fetchpriority="high"></figure>
+  </div>
+  <p class="hero__tag label" data-fade>I create scroll-stopping campaigns that transform your brand for better</p>
+  <p class="hero__role label" data-fade>Marketing &amp; brand strategist<br>Fashion · Beauty · Lifestyle</p>
+  <p class="hero__based label" data-fade>Based in Los Angeles</p>
+  <h1 class="sr">Scarlett Marais, marketing and brand strategist</h1>
+  <div class="hero__script script" data-word="Scarlett" data-stroke="104" role="img" aria-label="Scarlett"><span class="script__fallback">Scarlett</span></div>
+  <a href="#contact" class="badge" data-fade data-cursor="Book" aria-label="Available for projects in Q1 2027. Book a call">
+    <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="badge-c" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#badge-c">Available Q1 2027 ✦ Book a call ✦ </textPath></text></svg>
+    <svg class="badge__heart" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg>
+  </a>
+  <a href="#intro" class="hero__scroll label" data-fade><span>Scroll</span><i></i></a>
+</header>
+
+<!-- ============ INTRO ============ -->
+<section class="intro wrap" id="intro">
+  <div class="intro__grid">
+    <div class="intro__copy">
+      <p class="eyebrow label" data-rise>I don’t do cookie cutter</p>
+      <h2 class="intro__title" aria-label="Where creativity meets conversion">
+        <span class="line" data-rise>Where Creativity</span>
+        <span class="line"><span data-rise>Meets</span><span class="script script--inline" data-word="Conversion" data-stroke="96"><span class="script__fallback">Conversion</span></span></span>
+      </h2>
+      <p class="intro__body" data-rise>I’m Scarlett, a brand and marketing strategist who builds campaigns people screenshot, share and buy from. For nine years I’ve helped fashion, beauty and lifestyle brands turn a pretty feed into a profitable one, with sharper positioning, content that has a point of view and paid media that pays for itself.</p>
+      <div class="intro__actions" data-rise>
+        <a href="#work" class="btn btn--red magnetic">See my work</a>
+        <a href="#services" class="label link-u">Services &amp; rates</a>
+      </div>
+    </div>
+    <figure class="intro__photo">
+      <div class="intro__frame" data-cursor="Hello"><img src="https://images.unsplash.com/photo-1762331965279-b212d5b8601d?auto=format&fit=crop&w=900&q=80" alt="Scarlett sitting on a rooftop ledge in a red blazer"></div>
+      <figcaption class="label"><span>Glossé Beauty</span><span>Spring launch, 2026</span></figcaption>
+      <div class="sticker" aria-hidden="true"><div><b>est.</b><span class="label">2017</span></div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ WHAT I DO ============ -->
+<section class="what" id="what" aria-labelledby="what-title">
+  <div class="what__inner">
+    <p class="what__eyebrow label"><span class="type" data-text="[ What I do ]">[ What I do ]</span></p>
+    <h2 class="what__title" id="what-title" aria-label="Elevating ideas to new heights">
+      <span class="row split" aria-hidden="true">Elevating</span>
+      <span class="row split" aria-hidden="true">Ideas to New</span>
+    </h2>
+    <div class="what__script script" data-word="Heights" data-stroke="92" aria-hidden="true"><span class="script__fallback">Heights</span></div>
+    <a href="#services" class="btn btn--mist magnetic">Learn more</a>
+  </div>
+
+  <figure class="pola pola--tl" data-from="left" data-rot="-9" data-cursor="Drag">
+    <span class="pola__tape" aria-hidden="true"></span>
+    <div class="pola__photo"><img src="https://images.unsplash.com/photo-1762331974594-d6712976cb3f?auto=format&fit=crop&w=500&q=75" alt="Scarlett laughing on the rooftop" draggable="false"></div>
+    <figcaption>Glossé, SS26</figcaption>
+  </figure>
+  <figure class="pola pola--tr pola--bw" data-from="right" data-rot="7" data-cursor="Drag">
+    <span class="pola__tape" aria-hidden="true"></span>
+    <div class="pola__photo"><img src="https://images.unsplash.com/photo-1762331960076-29d8ac39c950?auto=format&fit=crop&w=500&q=75" alt="Black and white profile of Scarlett" draggable="false"></div>
+    <figcaption>Paris, fashion week</figcaption>
+  </figure>
+  <figure class="pola pola--bl pola--bw" data-from="left" data-rot="6" data-cursor="Drag">
+    <span class="pola__tape" aria-hidden="true"></span>
+    <div class="pola__photo"><img src="https://images.unsplash.com/photo-1762331974006-1d1de8c2cc8b?auto=format&fit=crop&w=500&q=75" alt="Black and white portrait of Scarlett looking up" draggable="false"></div>
+    <figcaption>Behind the lens</figcaption>
+  </figure>
+  <figure class="pola pola--br" data-from="right" data-rot="-7" data-cursor="Drag">
+    <span class="pola__tape" aria-hidden="true"></span>
+    <div class="pola__photo"><img src="https://images.unsplash.com/photo-1762331974018-cae61a6bb833?auto=format&fit=crop&w=500&q=75" alt="Scarlett smiling in a printed top and red blazer" draggable="false"></div>
+    <figcaption>Rouge launch</figcaption>
+  </figure>
+  <p class="what__hint label" aria-hidden="true">Psst, you can drag the photos</p>
+</section>
+
+<div class="mq mq--thin" data-speed="46" aria-hidden="true">
+  <div class="mq__track"><span class="mq__item">I do things differently than the rest <i>★</i></span><span class="mq__item">Campaigns with a point of view <i>★</i></span></div>
+</div>
+
+<!-- ============ NUMBERS ============ -->
+<section class="nums wrap" id="numbers" aria-labelledby="nums-title">
+  <div class="nums__head">
+    <div>
+      <p class="eyebrow label" data-rise>By the numbers</p>
+      <h2 class="h2" id="nums-title" data-rise style="margin-top:16px">Pretty campaigns, <em style="color:var(--red)">very</em> real results.</h2>
+    </div>
+    <p data-rise>Every campaign I run starts with a number we agree on together and ends with a report that shows whether we hit it. These are the totals across my client work since 2017.</p>
+  </div>
+  <div class="nums__grid">
+    <article class="stat" data-rise><span class="stat__n" data-count="48" data-prefix="$" data-suffix="M">$48M</span><p>in revenue attributed to campaigns I led</p><span class="label">Since 2017</span></article>
+    <article class="stat" data-rise><span class="stat__n" data-count="312" data-suffix="%">312%</span><p>average lift in engagement within the first 90 days</p><span class="label">Across 41 retainers</span></article>
+    <article class="stat" data-rise><span class="stat__n" data-count="60" data-suffix="+">60+</span><p>fashion, beauty and lifestyle brands launched or relaunched</p><span class="label">US · EU · UK</span></article>
+    <article class="stat" data-rise><span class="stat__n" data-count="2.4" data-dec="1" data-suffix="B">2.4B</span><p>organic impressions on TikTok, Instagram and Pinterest</p><span class="label">Zero bots, promise</span></article>
+  </div>
+</section>
+
+<!-- ============ WONDERLAND CASE ============ -->
+<section class="wl" id="work" aria-labelledby="wl-title">
+  <div class="wl__top wrap">
+    <span class="label">Case study 07</span>
+    <span class="wl__lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <button class="wl__results label" type="button" data-case="wonderland"><i aria-hidden="true"></i>Results (3)</button>
+  </div>
+  <div class="wl__stage">
+    <figure class="wl__img wl__img--a" data-cursor="View"><img src="https://images.unsplash.com/photo-1670607231621-c00fd76d2387?auto=format&fit=crop&w=500&q=75" alt="Red patent high heel"></figure>
+    <figure class="wl__img wl__img--b" data-cursor="View"><img src="https://images.unsplash.com/photo-1728857442002-5fdf4bcebde2?auto=format&fit=crop&w=1000&q=80" alt="Campaign model with red hair in red light"></figure>
+    <figure class="wl__img wl__img--c" data-cursor="View"><img src="https://images.unsplash.com/photo-1760473004054-eb0fd50ea9ae?auto=format&fit=crop&w=500&q=75" alt="Red heels with bows"></figure>
+    <div class="wl__lbls wrap">
+      <span class="label">Featured campaign</span>
+      <span class="label">/Season - 26/</span>
+      <span class="label">When everybody wonders</span>
+    </div>
+    <h2 class="wl__word" id="wl-title" aria-label="Wonderland"><span class="wl__word-in" aria-hidden="true"><span class="ch">W</span><span class="ch">O</span><span class="ch">N</span><span class="ch">D</span><span class="ch">E</span><span class="ch">R</span><span class="ch">L</span><span class="ch">A</span><span class="ch">N</span><span class="ch">D</span></span></h2>
+  </div>
+  <div class="wl__lower">
+    <div class="wl__band wrap">
+      <h3 class="wl__coll">Selected work</h3>
+      <p class="label">Decode the statement.<br>Wear the code.</p>
+      <span class="label">/Season - 26/</span>
+    </div>
+    <div class="wl__grid">
+      <a href="#work" class="wl__cell" data-case="wonderland" data-cursor="Open">
+        <img src="https://images.unsplash.com/photo-1686668572519-1793f1f5f37f?auto=format&fit=crop&w=800&q=78" alt="Legs in red stilettos against black">
+        <span class="wl__meta"><span class="label">Maison Rouge</span><b>Wonderland</b><span>18.6M views in 72 hours</span></span>
+        <span class="wl__flashcell" aria-hidden="true"></span>
+      </a>
+      <a href="#work" class="wl__cell" data-case="redtape" data-cursor="Open">
+        <img src="https://images.unsplash.com/photo-1676576844102-89be768745bb?auto=format&fit=crop&w=800&q=78" alt="Model in a red coat and sunglasses">
+        <span class="wl__meta"><span class="label">Velvet &amp; Co.</span><b>Red Tape</b><span>+212% engagement</span></span>
+        <span class="wl__flashcell" aria-hidden="true"></span>
+      </a>
+      <a href="#work" class="wl__cell" data-case="lipservice" data-cursor="Open">
+        <img src="https://images.unsplash.com/photo-1579752515149-489d8d711342?auto=format&fit=crop&w=800&q=78" alt="Close-up of red lips">
+        <span class="wl__meta"><span class="label">Glossé Beauty</span><b>Lip Service</b><span>Sold out in 9 days</span></span>
+        <span class="wl__flashcell" aria-hidden="true"></span>
+      </a>
+      <div class="wl__cell wl__cell--last">
+        <a href="#work" class="wl__cell-link" data-case="maryjane" data-cursor="Open" aria-label="Open the Mary Jane Drop case study">
+          <img src="https://images.unsplash.com/photo-1686668571985-8fd9e7cae040?auto=format&fit=crop&w=800&q=78" alt="Pair of red high heels">
+          <span class="wl__meta"><span class="label">Cherry Lane</span><b>Mary Jane Drop</b><span>4.1x return on ad spend</span></span>
+        </a>
+        <a href="#contact" class="wl__cta">Request the full deck <span aria-hidden="true">↗</span></a>
+        <span class="wl__flashcell" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="wl__foot wrap">
+      <p class="label">Wonderland × Maison Rouge. A launch for women who don’t ask for permission: confident, high-contrast and unapologetically feminine. Minimal in form, maximal in impact.</p>
+      <p class="label">Role: strategy &amp;<br>creative direction</p>
+    </div>
+    <div class="wl__flash" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="svc wrap" id="services" aria-labelledby="svc-title">
+  <div class="svc__head">
+    <div>
+      <p class="eyebrow label" data-rise>Services</p>
+      <h2 class="h2" id="svc-title" data-rise style="margin-top:16px">Everything your brand needs to be <em>impossible to ignore</em></h2>
+    </div>
+    <div class="svc__side" data-rise>
+      <p>Six ways we can work together, with what you get and what it costs. Tap <b>Add to brief</b> on the ones you need and they’ll be ticked for you in the contact form.</p>
+      <div class="svc__filters" role="group" aria-label="Filter services">
+        <button type="button" class="svc__filter is-on" data-filter="all" aria-pressed="true">All<sup>6</sup></button>
+        <button type="button" class="svc__filter" data-filter="strategy" aria-pressed="false">Strategy<sup>2</sup></button>
+        <button type="button" class="svc__filter" data-filter="content" aria-pressed="false">Content<sup>2</sup></button>
+        <button type="button" class="svc__filter" data-filter="growth" aria-pressed="false">Growth<sup>2</sup></button>
+      </div>
+      <a href="#contact" class="svc__brief label" hidden><b>0</b>In your brief · Finish it</a>
+    </div>
+  </div>
+  <div class="svc__grid">
+    <article class="sv" data-cat="strategy">
+      <figure class="sv__img"><img src="https://images.unsplash.com/photo-1762331968158-7a8bd46f4e69?auto=format&fit=crop&w=760&q=78" alt="Scarlett with her arms crossed on a city rooftop" loading="lazy"><span class="sv__cat label">Strategy</span><span class="sv__shine" aria-hidden="true"></span></figure>
+      <div class="sv__body">
+        <div class="sv__title"><h3>Brand strategy</h3><p class="sv__price"><small>from</small>$6,500</p></div>
+        <p class="sv__tags label">Positioning · Voice · Audience</p>
+        <p class="sv__desc">Find the one thing your brand can own, then say it everywhere. Workshops, audience research and a brand book your team will actually open.</p>
+        <ul class="chips-list"><li>Positioning workshop</li><li>Audience personas</li><li>Messaging house</li><li>Voice guide</li></ul>
+        <div class="sv__foot"><span class="label">3–4 weeks</span><button type="button" class="sv__add" data-need="Brand strategy" aria-pressed="false"><span>Add to brief</span><i aria-hidden="true">+</i></button></div>
+      </div>
+    </article>
+    <article class="sv" data-cat="content">
+      <figure class="sv__img"><img src="https://images.unsplash.com/photo-1762331957565-e7a22f893403?auto=format&fit=crop&w=760&q=78" alt="Scarlett looking up at the skyline" loading="lazy"><span class="sv__cat label">Content</span><span class="sv__shine" aria-hidden="true"></span></figure>
+      <div class="sv__body">
+        <div class="sv__title"><h3>Social &amp; content</h3><p class="sv__price"><small>monthly</small>$4,000</p></div>
+        <p class="sv__tags label">TikTok · Instagram · Pinterest</p>
+        <p class="sv__desc">Content pillars, shoot direction and a posting system that keeps you consistent without burning your team out.</p>
+        <ul class="chips-list"><li>Content pillars</li><li>Shoot direction</li><li>Monthly calendar</li><li>Community playbook</li></ul>
+        <div class="sv__foot"><span class="label">Monthly retainer</span><button type="button" class="sv__add" data-need="Social &amp; content" aria-pressed="false"><span>Add to brief</span><i aria-hidden="true">+</i></button></div>
+      </div>
+    </article>
+    <article class="sv" data-cat="growth">
+      <figure class="sv__img"><img src="https://images.unsplash.com/photo-1602260395251-0fe691861b56?auto=format&fit=crop&w=760&q=78" alt="Gold and red lipsticks on red silk" loading="lazy"><span class="sv__cat label">Growth</span><span class="sv__shine" aria-hidden="true"></span></figure>
+      <div class="sv__body">
+        <div class="sv__title"><h3>Paid media</h3><p class="sv__price"><small>monthly</small>$3,500</p></div>
+        <p class="sv__tags label">Meta · TikTok · Google</p>
+        <p class="sv__desc">Creative testing and media plans built around your margin, not vanity metrics. You see every dollar in a live dashboard.</p>
+        <ul class="chips-list"><li>Creative testing</li><li>Media planning</li><li>Live dashboard</li><li>Weekly optimisation</li></ul>
+        <div class="sv__foot"><span class="label">Monthly retainer</span><button type="button" class="sv__add" data-need="Paid media" aria-pressed="false"><span>Add to brief</span><i aria-hidden="true">+</i></button></div>
+      </div>
+    </article>
+    <article class="sv" data-cat="content">
+      <figure class="sv__img"><img src="https://images.unsplash.com/photo-1762331656735-3e41fd13a452?auto=format&fit=crop&w=760&q=78" alt="Scarlett tossing her hair on the rooftop" loading="lazy"><span class="sv__cat label">Content</span><span class="sv__shine" aria-hidden="true"></span></figure>
+      <div class="sv__body">
+        <div class="sv__title"><h3>Creators &amp; influencers</h3><p class="sv__price"><small>from</small>$5,000</p></div>
+        <p class="sv__tags label">Seeding · Ambassadors · UGC</p>
+        <p class="sv__desc">Creator shortlists, briefs and contracts, plus seeding programs that turn a first post into a long-term partnership.</p>
+        <ul class="chips-list"><li>Creator sourcing</li><li>Briefs &amp; contracts</li><li>Seeding program</li><li>UGC library</li></ul>
+        <div class="sv__foot"><span class="label">6–8 weeks</span><button type="button" class="sv__add" data-need="Creators" aria-pressed="false"><span>Add to brief</span><i aria-hidden="true">+</i></button></div>
+      </div>
+    </article>
+    <article class="sv" data-cat="strategy">
+      <figure class="sv__img"><img src="https://images.unsplash.com/photo-1762331972504-ca7246c13835?auto=format&fit=crop&w=760&q=78" alt="Scarlett sitting on a ledge above the city" loading="lazy"><span class="sv__cat label">Strategy</span><span class="sv__shine" aria-hidden="true"></span></figure>
+      <div class="sv__body">
+        <div class="sv__title"><h3>Launch campaigns</h3><p class="sv__price"><small>from</small>$12,000</p></div>
+        <p class="sv__tags label">Drops · Rebrands · Pop-ups</p>
+        <p class="sv__desc">End-to-end planning from first teaser to sell-out, with one clear story told across every channel and touchpoint.</p>
+        <ul class="chips-list"><li>Campaign concept</li><li>Teaser plan</li><li>Launch-day war room</li><li>Post-launch report</li></ul>
+        <div class="sv__foot"><span class="label">8–10 weeks</span><button type="button" class="sv__add" data-need="A launch" aria-pressed="false"><span>Add to brief</span><i aria-hidden="true">+</i></button></div>
+      </div>
+    </article>
+    <article class="sv" data-cat="growth">
+      <figure class="sv__img"><img src="https://images.unsplash.com/photo-1552751076-bce4fcb40827?auto=format&fit=crop&w=760&q=78" alt="Close-up of a red rose" loading="lazy"><span class="sv__cat label">Growth</span><span class="sv__shine" aria-hidden="true"></span></figure>
+      <div class="sv__body">
+        <div class="sv__title"><h3>Email &amp; retention</h3><p class="sv__price"><small>from</small>$3,000</p></div>
+        <p class="sv__tags label">Flows · Loyalty · SMS</p>
+        <p class="sv__desc">Welcome, post-purchase and win-back flows written in your voice, so customers come back without needing a discount code.</p>
+        <ul class="chips-list"><li>Lifecycle map</li><li>Flow copywriting</li><li>Loyalty concept</li><li>SMS calendar</li></ul>
+        <div class="sv__foot"><span class="label">3 weeks</span><button type="button" class="sv__add" data-need="Email &amp; retention" aria-pressed="false"><span>Add to brief</span><i aria-hidden="true">+</i></button></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="proc" id="process" aria-labelledby="proc-title">
+  <div class="proc__pin">
+    <div class="proc__head wrap">
+      <div>
+        <p class="eyebrow label">How we’ll work together</p>
+        <h2 class="h2" id="proc-title" style="margin-top:14px">The <em>Scarlett</em> method</h2>
+      </div>
+      <p class="label">Four steps · Six weeks to launch · Tap a page to turn it over</p>
+    </div>
+    <div class="proc__track">
+      <svg class="proc__thread" aria-hidden="true"><path/></svg>
+      <article class="proc__card">
+        <span class="proc__pin-peg" aria-hidden="true"></span>
+        <div class="paper" tabindex="0" role="button" aria-pressed="false" aria-label="Step 1, Diagnose. Turn over to see what you get" data-cursor="Turn">
+          <div class="paper__inner">
+            <div class="paper__face paper__front">
+              <div class="paper__top"><span class="proc__num">01</span><span class="label">Weeks 1–2</span></div>
+              <figure class="paper__photo"><img src="https://images.unsplash.com/photo-1762331974109-e9d685c0311d?auto=format&fit=crop&w=640&q=75" alt="" loading="lazy"><figcaption>audit day</figcaption></figure>
+              <h3>Diagnose</h3>
+              <p>An audit of your brand, channels, competitors and numbers, with a frank report on what’s working.</p>
+              <span class="paper__turn label">Turn over <i aria-hidden="true">↻</i></span>
+            </div>
+            <div class="paper__face paper__back">
+              <p class="label">What you get</p>
+              <h3>Diagnose</h3>
+              <ul class="checks"><li>Brand and channel audit</li><li>Competitor teardown</li><li>Five customer interviews</li><li>A fix-first list</li></ul>
+              <p class="paper__stat"><b>40+</b>pages of findings, written plainly</p>
+              <span class="paper__turn label">Turn back <i aria-hidden="true">↺</i></span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="proc__card">
+        <span class="proc__pin-peg" aria-hidden="true"></span>
+        <div class="paper" tabindex="0" role="button" aria-pressed="false" aria-label="Step 2, Strategize. Turn over to see what you get" data-cursor="Turn">
+          <div class="paper__inner">
+            <div class="paper__face paper__front">
+              <div class="paper__top"><span class="proc__num">02</span><span class="label">Weeks 2–3</span></div>
+              <figure class="paper__photo"><img src="https://images.unsplash.com/photo-1762331966023-859ad55cd08a?auto=format&fit=crop&w=640&q=75" alt="" loading="lazy"><figcaption>plan on a page</figcaption></figure>
+              <h3>Strategize</h3>
+              <p>Positioning, audience and a 90-day campaign plan with clear targets and the KPIs we’ll report on.</p>
+              <span class="paper__turn label">Turn over <i aria-hidden="true">↻</i></span>
+            </div>
+            <div class="paper__face paper__back">
+              <p class="label">What you get</p>
+              <h3>Strategize</h3>
+              <ul class="checks"><li>Positioning statement</li><li>Audience map</li><li>90-day campaign plan</li><li>KPI scorecard</li></ul>
+              <p class="paper__stat"><b>1 page</b>strategy you can pin to the wall</p>
+              <span class="paper__turn label">Turn back <i aria-hidden="true">↺</i></span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="proc__card">
+        <span class="proc__pin-peg" aria-hidden="true"></span>
+        <div class="paper" tabindex="0" role="button" aria-pressed="false" aria-label="Step 3, Create. Turn over to see what you get" data-cursor="Turn">
+          <div class="paper__inner">
+            <div class="paper__face paper__front">
+              <div class="paper__top"><span class="proc__num">03</span><span class="label">Weeks 3–6</span></div>
+              <figure class="paper__photo"><img src="https://images.unsplash.com/photo-1762331973879-271d2e5d6590?auto=format&fit=crop&w=640&q=75" alt="" loading="lazy"><figcaption>on set</figcaption></figure>
+              <h3>Create</h3>
+              <p>Shoots, scripts, copy and creator briefs. Every asset is made for its channel and tied to one story.</p>
+              <span class="paper__turn label">Turn over <i aria-hidden="true">↻</i></span>
+            </div>
+            <div class="paper__face paper__back">
+              <p class="label">What you get</p>
+              <h3>Create</h3>
+              <ul class="checks"><li>Shoot direction and moodboards</li><li>Scripts and captions</li><li>Creator briefs</li><li>A tagged asset library</li></ul>
+              <p class="paper__stat"><b>30+</b>finished assets every month</p>
+              <span class="paper__turn label">Turn back <i aria-hidden="true">↺</i></span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="proc__card">
+        <span class="proc__pin-peg" aria-hidden="true"></span>
+        <div class="paper" tabindex="0" role="button" aria-pressed="false" aria-label="Step 4, Amplify and measure. Turn over to see what you get" data-cursor="Turn">
+          <div class="paper__inner">
+            <div class="paper__face paper__front">
+              <div class="paper__top"><span class="proc__num">04</span><span class="label">Week 6 onward</span></div>
+              <figure class="paper__photo"><img src="https://images.unsplash.com/photo-1762331975804-bce3e0578a8f?auto=format&fit=crop&w=640&q=75" alt="" loading="lazy"><figcaption>launch day</figcaption></figure>
+              <h3>Amplify &amp; measure</h3>
+              <p>Launch, test, cut what underperforms and scale what wins, with a live dashboard all the way.</p>
+              <span class="paper__turn label">Turn over <i aria-hidden="true">↻</i></span>
+            </div>
+            <div class="paper__face paper__back">
+              <p class="label">What you get</p>
+              <h3>Amplify &amp; measure</h3>
+              <ul class="checks"><li>Media plan and launch</li><li>Weekly creative tests</li><li>Live results dashboard</li><li>Monthly review call</li></ul>
+              <p class="paper__stat"><b>4.1x</b>average return on ad spend</p>
+              <span class="paper__turn label">Turn back <i aria-hidden="true">↺</i></span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="proc__card">
+        <span class="proc__pin-peg" aria-hidden="true"></span>
+        <div class="paper paper--end">
+          <p class="label">Ready when you are</p>
+          <h3>Let’s plan your next launch.</h3>
+          <a href="#contact" class="btn btn--cream magnetic">Book a discovery call</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about wrap" id="about" aria-labelledby="about-title">
+  <div class="about__grid">
+    <figure class="about__photo">
+      <span class="pola__tape" aria-hidden="true"></span>
+      <div class="about__frame" data-cursor="Hi!"><img src="https://images.unsplash.com/photo-1762331973070-8195d94e54a6?auto=format&fit=crop&w=900&q=80" alt="Scarlett smiling on a rooftop in her red blazer"></div>
+    </figure>
+    <div class="about__copy">
+      <p class="eyebrow label" data-rise>Behind the lipstick</p>
+      <h2 class="h2" id="about-title" data-rise>Hi, I’m Scarlett. I make brands <em>blush</em> and sell.</h2>
+      <p data-rise>I started in a beauty PR agency in Paris, ran brand at a skincare startup in New York, and opened my studio in Los Angeles in 2021. I take on a small roster of founders each quarter, so every brand gets my full attention, my sharpest ideas and my calendar.</p>
+      <ul class="facts">
+        <li data-rise><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg>Nine years in fashion and beauty marketing</li>
+        <li data-rise><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg>Paris, then New York, now Los Angeles</li>
+        <li data-rise><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg>Fluent in English, French and TikTok</li>
+        <li data-rise><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg>Powered by espresso and a red lip</li>
+      </ul>
+      <div class="sign">
+        <div class="script" data-word="with love" data-stroke="84" role="img" aria-label="with love"><span class="script__fallback">with love</span></div>
+        <span class="label">Scarlett Marais</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mq mq--brands" data-speed="70" data-dir="1" aria-label="Brands I have worked with">
+  <div class="mq__track">
+    <span class="mq__item"><span class="b1">Maison Rouge</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+    <span class="mq__item"><span class="b2">Velvet &amp; Co.</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+    <span class="mq__item"><span class="b3">Glossé</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+    <span class="mq__item"><span class="b4">Cherry Lane</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+    <span class="mq__item"><span class="b1">Rosé Atelier</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+    <span class="mq__item"><span class="b2">Lumière Skin</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+    <span class="mq__item"><span class="b3">Blush Society</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+    <span class="mq__item"><span class="b4">Oui Studio</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+  </div>
+</div>
+
+<!-- ============ LOVE NOTES ============ -->
+<section class="notes wrap" id="notes" aria-labelledby="notes-title">
+  <div class="notes__grid">
+    <div class="notes__intro">
+      <p class="eyebrow label" data-rise>Love notes</p>
+      <h2 class="h2" id="notes-title" data-rise>Kind words from <em>founders I adore</em></h2>
+      <p data-rise>Drag a note off the pile to read the next one, or use the arrows.</p>
+      <div class="notes__ctrl" data-rise>
+        <button type="button" data-notes="prev" aria-label="Previous note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <span class="notes__count label" aria-live="polite">01 / 04</span>
+        <button type="button" data-notes="next" aria-label="Next note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      </div>
+    </div>
+    <div class="notes__stack" data-cursor="Drag">
+      <article class="note" data-i="1">
+        <span class="note__seal" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+        <p class="note__hearts" aria-label="Rated 5 out of 5">♥ ♥ ♥ ♥ ♥</p>
+        <blockquote class="note__q">“Scarlett rewrote how we talk about ourselves in a single workshop. Our launch sold out in nine days and the comments still say ‘obsessed’.”</blockquote>
+        <footer class="note__who"><b>Camille Laurent</b><span class="label">Founder, Glossé Beauty</span></footer>
+      </article>
+      <article class="note" data-i="2">
+        <span class="note__seal" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+        <p class="note__hearts" aria-label="Rated 5 out of 5">♥ ♥ ♥ ♥ ♥</p>
+        <blockquote class="note__q">“She loves the pretty part and the spreadsheet part equally, which is rare. Our return on ad spend went from 1.6 to 4.1 in one quarter.”</blockquote>
+        <footer class="note__who"><b>Jordan Ellis</b><span class="label">Head of Growth, Cherry Lane</span></footer>
+      </article>
+      <article class="note" data-i="3">
+        <span class="note__seal" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+        <p class="note__hearts" aria-label="Rated 5 out of 5">♥ ♥ ♥ ♥ ♥</p>
+        <blockquote class="note__q">“Calm, fast and impossibly well dressed on set. Wonderland is the most talked-about campaign our house has ever run.”</blockquote>
+        <footer class="note__who"><b>Inès Moreau</b><span class="label">Creative Director, Maison Rouge</span></footer>
+      </article>
+      <article class="note" data-i="4">
+        <span class="note__seal" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></span>
+        <p class="note__hearts" aria-label="Rated 5 out of 5">♥ ♥ ♥ ♥ ♥</p>
+        <blockquote class="note__q">“Scarlett built our creator program from zero to 140 ambassadors. Half of our new customers now find us through creators.”</blockquote>
+        <footer class="note__who"><b>Priya Shah</b><span class="label">CEO, Velvet &amp; Co.</span></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOODBOARD ============ -->
+<section class="mood wrap" aria-labelledby="mood-title">
+  <div class="mood__head">
+    <div><p class="eyebrow label">On my moodboard</p><h2 id="mood-title">Tap a photo to <em>heart</em> it</h2></div>
+    <a class="label link-u" href="https://www.instagram.com/" target="_blank" rel="noopener">@scarlett.marais ↗</a>
+  </div>
+  <div class="mood__grid">
+    <button class="mood__tile" type="button" aria-pressed="false" data-likes="1284" aria-label="Lipstick and rose, 1,284 likes"><img src="https://images.unsplash.com/photo-1706821722700-842cb7329a08?auto=format&fit=crop&w=520&q=72" alt="" loading="lazy"><span class="mood__like"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg><b>1,284</b></span></button>
+    <button class="mood__tile" type="button" aria-pressed="false" data-likes="2310" aria-label="Red rose, 2,310 likes"><img src="https://images.unsplash.com/photo-1552751076-bce4fcb40827?auto=format&fit=crop&w=520&q=72" alt="" loading="lazy"><span class="mood__like"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg><b>2,310</b></span></button>
+    <button class="mood__tile" type="button" aria-pressed="false" data-likes="987" aria-label="Scarlett on the rooftop, 987 likes"><img src="https://images.unsplash.com/photo-1762331653763-47d8e247b543?auto=format&fit=crop&w=520&q=72" alt="" loading="lazy"><span class="mood__like"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg><b>987</b></span></button>
+    <button class="mood__tile" type="button" aria-pressed="false" data-likes="1702" aria-label="Red shoes, 1,702 likes"><img src="https://images.unsplash.com/photo-1689914667397-a77effb740da?auto=format&fit=crop&w=520&q=72" alt="" loading="lazy"><span class="mood__like"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg><b>1,702</b></span></button>
+    <button class="mood__tile" type="button" aria-pressed="false" data-likes="3045" aria-label="Scarlett by the skyline, 3,045 likes"><img src="https://images.unsplash.com/photo-1762331962126-e9d9ba2ac8f2?auto=format&fit=crop&w=520&q=72" alt="" loading="lazy"><span class="mood__like"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg><b>3,045</b></span></button>
+    <button class="mood__tile" type="button" aria-pressed="false" data-likes="1466" aria-label="Scarlett in sunglasses, 1,466 likes"><img src="https://images.unsplash.com/photo-1762331974216-eed26b6a2aed?auto=format&fit=crop&w=520&q=72" alt="" loading="lazy"><span class="mood__like"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg><b>1,466</b></span></button>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact wrap" id="contact" aria-labelledby="contact-title">
+  <div class="contact__grid">
+    <div>
+      <p class="eyebrow label" data-rise><i aria-hidden="true"></i>Now booking · Q1 2027</p>
+      <h2 class="contact__title" id="contact-title" data-rise>Let’s make your brand</h2>
+      <div class="contact__script script" data-word="unforgettable" data-stroke="92" role="img" aria-label="unforgettable"><span class="script__fallback">unforgettable</span></div>
+      <p class="contact__lead" data-rise>Tell me where your brand is today and where you want it to be. I reply to every brief within two business days.</p>
+      <div class="direct" data-rise>
+        <span class="label">Or write to me directly</span>
+        <button class="copy" type="button" data-copy="hello@scarlettmarais.com">hello@scarlettmarais.com <span>Copy</span></button>
+      </div>
+    </div>
+    <div>
+      <form class="form" id="brief" novalidate>
+        <div class="form__row">
+          <div class="field"><input id="f-name" name="name" type="text" required placeholder=" " autocomplete="name"><label for="f-name">Your name</label></div>
+          <div class="field"><input id="f-email" name="email" type="email" required placeholder=" " autocomplete="email"><label for="f-email">Email</label></div>
+        </div>
+        <div class="field"><input id="f-brand" name="brand" type="text" placeholder=" " autocomplete="organization"><label for="f-brand">Brand or website</label></div>
+        <fieldset class="chips">
+          <legend class="label">Budget</legend>
+          <label class="chip"><input type="radio" name="budget" id="b-1" value="Under $5k"><span>Under $5k</span></label>
+          <label class="chip"><input type="radio" name="budget" id="b-2" value="$5k to $15k"><span>$5k to $15k</span></label>
+          <label class="chip"><input type="radio" name="budget" id="b-3" value="$15k to $40k"><span>$15k to $40k</span></label>
+          <label class="chip"><input type="radio" name="budget" id="b-4" value="$40k+"><span>$40k+</span></label>
+        </fieldset>
+        <fieldset class="chips">
+          <legend class="label">I need help with</legend>
+          <label class="chip"><input type="checkbox" name="need" id="n-1" value="Brand strategy"><span>Brand strategy</span></label>
+          <label class="chip"><input type="checkbox" name="need" id="n-2" value="Social & content"><span>Social &amp; content</span></label>
+          <label class="chip"><input type="checkbox" name="need" id="n-3" value="Paid media"><span>Paid media</span></label>
+          <label class="chip"><input type="checkbox" name="need" id="n-4" value="Creators"><span>Creators</span></label>
+          <label class="chip"><input type="checkbox" name="need" id="n-5" value="A launch"><span>A launch</span></label>
+          <label class="chip"><input type="checkbox" name="need" id="n-6" value="Email & retention"><span>Email &amp; retention</span></label>
+        </fieldset>
+        <div class="field"><textarea id="f-msg" name="message" rows="4" placeholder=" "></textarea><label for="f-msg">Tell me about your brand</label></div>
+        <div class="form__foot">
+          <button class="btn btn--cream magnetic" type="submit">Prepare my brief <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg></button>
+          <p class="form__err" role="alert"></p>
+        </div>
+      </form>
+      <div class="done" id="brief-done" hidden>
+        <p class="label" style="color:var(--red)">Almost there</p>
+        <h3 class="done__title">Your brief is ready, <span data-name>love</span>.</h3>
+        <p>Copy it and send it to <b>hello@scarlettmarais.com</b>. I reply to every brief within two business days.</p>
+        <label class="sr" for="brief-text">Your brief</label>
+        <textarea id="brief-text" readonly rows="7"></textarea>
+        <div class="done__actions">
+          <button class="btn btn--red" type="button" data-copy-brief>Copy brief</button>
+          <button class="btn btn--line" type="button" data-edit>Edit brief</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot__big wrap">
+    <div class="foot__script script" data-word="Scarlett" data-stroke="104" role="img" aria-label="Scarlett"><span class="script__fallback">Scarlett</span></div>
+    <p class="foot__sub">Marais<span class="label">Marketing &amp; brand strategy</span></p>
+  </div>
+  <div class="foot__cols">
+    <div><p class="label">Explore</p><ul><li><a href="#work">Selected work</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#about">About</a></li></ul></div>
+    <div><p class="label">Follow</p><ul><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></li></ul></div>
+    <div><p class="label">Studio</p><p>Los Angeles, California</p><p><span class="clock">--:--</span> local time</p></div>
+    <div><button class="totop magnetic" type="button" data-cursor="Up"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back<br>to top</span></button></div>
+  </div>
+  <div class="foot__legal wrap label"><span>© 2026 Scarlett Marais Studio</span><span>Photography from Unsplash</span></div>
+</footer>
+
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__scrim" data-close></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title" data-lenis-prevent>
+    <button class="drawer__close" type="button" data-close>Close <span aria-hidden="true">✕</span></button>
+    <div class="drawer__body"></div>
+  </div>
+</aside>
+
+<a href="#contact" class="booking label"><i aria-hidden="true"></i>Booking Q1 2027 · 2 spots left</a>
+<div class="toast" role="status" aria-live="polite"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__ring"><b></b></span><span class="cursor__dot"></span></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script-words.js"></script>
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const root = document.documentElement;
+  if (!window.gsap) { root.classList.remove('js'); const l = document.querySelector('.loader'); if (l) l.remove(); return; }
+  gsap.registerPlugin(...[window.ScrollTrigger, window.Draggable, window.InertiaPlugin, window.Flip].filter(Boolean));
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  scrollTo(0, 0);
+
+  const HEART = '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.8 0 5.8 4.1 4.3 7.4C19.5 16.4 12 21 12 21z"/></svg>';
+  const SPARK = '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12C6.4 11.4 11.4 6.4 12 0z"/></svg>';
+
+  /* ---------- smooth scroll ---------- */
+  let lenis = null;
+  if (!reduce && window.Lenis) {
+    lenis = new Lenis({ lerp: 0.09 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+  window.__lenis = lenis; // used by the showcase video recorder
+  const lock = on => { root.classList.toggle('is-locked', on); if (lenis) on ? lenis.stop() : lenis.start(); };
+  const goTo = target => {
+    if (lenis) lenis.scrollTo(target, { duration: 1.6, easing: t => 1 - Math.pow(1 - t, 4) });
+    else (target === 0 ? window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }) : target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }));
+  };
+
+  /* ---------- handwriting: each glyph contour is revealed by a pen stroke that travels along it ---------- */
+  let inkId = 0;
+  function buildScript(el) {
+    const W = window.SCRIPT_WORDS && SCRIPT_WORDS[el.dataset.word];
+    if (!W) return null;
+    const [x, y, w, h] = W.vb, id = 'ink' + (++inkId), sw = +el.dataset.stroke || 96;
+    let mask = '', fill = '';
+    W.g.forEach(contours => { contours.forEach(d => { mask += `<path d="${d}"/>`; }); fill += contours.join(''); });
+    el.innerHTML = `<svg viewBox="${x} ${y} ${w} ${h}" aria-hidden="true" focusable="false"><defs><mask id="${id}" maskUnits="userSpaceOnUse" x="${x - sw}" y="${y - sw}" width="${w + 2 * sw}" height="${h + 2 * sw}"><g fill="none" stroke="#fff" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${mask}</g></mask></defs><path class="ink" d="${fill}" mask="url(#${id})"/><g class="nib"><circle class="nib__glow" r="${sw * .5}"/><circle class="nib__tip" r="${sw * .14}"/></g></svg>`;
+    el.style.setProperty('--ratio', (w / h).toFixed(4));
+    el.style.setProperty('--below', ((y + h) / h).toFixed(4));
+    const paths = $$('mask path', el);
+    paths.forEach(p => { const L = p.getTotalLength(); p._L = L; p.style.strokeDasharray = `${L} ${L}`; p.style.strokeDashoffset = reduce ? 0 : L; });
+    return { paths, nib: $('.nib', el) };
+  }
+  function write(el, { duration = 3 } = {}) {
+    const s = el && el._s, tl = gsap.timeline();
+    if (!s || reduce) return tl;
+    const nib = s.nib, total = s.paths.reduce((a, p) => a + p._L, 0);
+    tl.set(nib, { opacity: 1 });
+    s.paths.forEach((p, i) => {
+      const L = p._L, o = { t: 0 };
+      tl.to(o, {
+        t: 1, duration: Math.max(.06, L / total * duration), ease: 'none',
+        onUpdate() {
+          // the visible pass is the first half of a closed contour, so the pen lingers there and hurries home
+          const t = o.t, f = t < .72 ? t / .72 * .56 : .56 + (t - .72) / .28 * .44, len = f * L;
+          p.style.strokeDashoffset = L - len;
+          const pt = p.getPointAtLength(len);
+          nib.setAttribute('transform', `translate(${pt.x.toFixed(1)} ${pt.y.toFixed(1)})`);
+        }
+      }, i ? '>-0.03' : 0);
+    });
+    tl.to(nib, { opacity: 0, duration: .35 });
+    return tl;
+  }
+  $$('.script[data-word]').forEach(el => { el._s = buildScript(el); });
+
+  /* ---------- helpers ---------- */
+  function splitChars(el) {
+    const text = el.textContent;
+    el.innerHTML = [...text].map(c => c === ' ' ? ' ' : `<span class="ch">${c}</span>`).join('');
+    return $$('.ch', el);
+  }
+  const toast = (() => { const t = $('.toast'); let h; return msg => { t.textContent = msg; t.classList.add('on'); clearTimeout(h); h = setTimeout(() => t.classList.remove('on'), 2400); }; })();
+  function burst(x, y, n = 8, kind = HEART) {
+    const colors = ['#E01A2F', '#C1121F', '#E9A6AA', '#F6D7D5', '#F7EFEA'];
+    for (let i = 0; i < n; i++) {
+      const s = document.createElement('span');
+      s.className = 'fx'; s.innerHTML = kind; s.style.color = colors[i % colors.length];
+      document.body.appendChild(s);
+      const a = Math.random() * Math.PI * 2, d = 36 + Math.random() * 56;
+      gsap.set(s, { x, y, scale: 0, rotation: gsap.utils.random(-30, 30) });
+      gsap.to(s, { x: x + Math.cos(a) * d, y: y + Math.sin(a) * d - 18, scale: gsap.utils.random(.55, 1.25), rotation: gsap.utils.random(-50, 50), duration: .75, ease: 'power3.out' });
+      gsap.to(s, { opacity: 0, y: `-=${22 + Math.random() * 20}`, duration: .5, delay: .55, ease: 'power1.in', onComplete: () => s.remove() });
+    }
+  }
+  async function copyText(text, okMsg) {
+    try { await navigator.clipboard.writeText(text); toast(okMsg); }
+    catch { toast('Copy blocked here. Select the text and copy it instead.'); }
+  }
+
+  /* ---------- loader + hero entrance (fade in, then the name writes itself) ---------- */
+  const heroImgs = $$('.hero__img img');
+  if (!reduce) {
+    gsap.set('.hero__img', { autoAlpha: 0 });
+    gsap.set('.hero [data-fade], .nav', { autoAlpha: 0 });
+  }
+  function heroIn() {
+    if (reduce) return;
+    gsap.timeline()
+      .fromTo('.hero__img', { autoAlpha: 0, scale: 1.16, filter: 'blur(18px) saturate(.5)' }, { autoAlpha: 1, scale: 1, filter: 'blur(0px) saturate(1)', duration: 1.9, ease: 'power3.out', stagger: .28, clearProps: 'filter' })
+      .fromTo('.hero [data-fade]:not(.badge)', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 1.1, ease: 'power2.out', stagger: .12 }, .7)
+      .fromTo('.nav', { autoAlpha: 0, y: -16 }, { autoAlpha: 1, y: 0, duration: 1, ease: 'power2.out' }, .8)
+      .add(write($('.hero__script'), { duration: 3.4 }), 1.05)
+      .fromTo('.badge', { autoAlpha: 0, scale: .3, rotation: -140 }, { autoAlpha: 1, scale: 1, rotation: 0, duration: 1.2, ease: 'back.out(1.6)' }, 2.4);
+  }
+  async function boot() {
+    const ld = $('.loader');
+    if (ld && /[?&]film\b/.test(location.search)) ld.remove();
+    if (!document.contains(ld)) return heroIn();
+    if (reduce) { ld.remove(); return heroIn(); }
+    lock(true);
+    const num = $('.loader__num b', ld), bar = $('.loader__bar i', ld);
+    const imgsReady = Promise.race([
+      Promise.all(heroImgs.map(img => img.complete ? 1 : new Promise(r => { img.addEventListener('load', r, { once: true }); img.addEventListener('error', r, { once: true }); }))),
+      wait(3200)
+    ]);
+    gsap.from('.loader__hint', { autoAlpha: 0, y: 10, duration: .8, delay: .2 });
+    const counted = new Promise(r => {
+      const o = { v: 0 };
+      gsap.to(o, { v: 100, duration: 1.7, ease: 'power2.inOut', onUpdate() { num.textContent = String(Math.round(o.v)).padStart(2, '0'); bar.style.transform = `scaleX(${o.v / 100})`; }, onComplete: r });
+    });
+    await Promise.all([counted, imgsReady]);
+    gsap.to('.loader__mid, .loader__row', { y: -40, autoAlpha: 0, duration: .6, ease: 'power2.in' });
+    gsap.to(ld, { yPercent: -100, duration: 1.1, ease: 'expo.inOut', delay: .15, onComplete: () => ld.remove() });
+    await wait(560);
+    lock(false);
+    heroIn();
+  }
+
+  /* hero: scroll parallax, mouse drift, sparkle trail */
+  gsap.to('.hero__img img', { yPercent: 9, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to('.hero__script svg', { yPercent: -18, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  if (fine && !reduce) {
+    const hero = $('.hero');
+    const mx = [gsap.quickTo('.hero__img--l img', 'x', { duration: 1.4, ease: 'power3' }), gsap.quickTo('.hero__img--r img', 'x', { duration: 1.4, ease: 'power3' })];
+    let last = 0;
+    hero.addEventListener('pointermove', e => {
+      const nx = e.clientX / innerWidth - .5;
+      mx[0](nx * -18); mx[1](nx * 18);
+      const now = performance.now();
+      if (now - last > 55) {
+        last = now;
+        const s = document.createElement('span');
+        s.className = 'fx'; s.innerHTML = Math.random() > .5 ? SPARK : HEART; s.style.color = Math.random() > .4 ? '#F7EFEA' : '#E9A6AA';
+        document.body.appendChild(s);
+        gsap.set(s, { x: e.clientX, y: e.clientY, scale: gsap.utils.random(.3, .7), rotation: gsap.utils.random(-30, 30) });
+        gsap.to(s, { y: `+=${gsap.utils.random(20, 50)}`, x: `+=${gsap.utils.random(-16, 16)}`, opacity: 0, scale: 0, duration: gsap.utils.random(.7, 1.2), ease: 'power1.out', onComplete: () => s.remove() });
+      }
+    });
+  }
+
+  /* nav state, booking pill, progress */
+  ScrollTrigger.create({ trigger: '.hero', start: 'bottom 88px', onEnter: () => document.body.classList.add('past-hero'), onLeaveBack: () => document.body.classList.remove('past-hero') });
+  ScrollTrigger.create({ trigger: '#contact', start: 'top 70%', end: 'max', toggleClass: { targets: document.body, className: 'at-contact' } });
+  gsap.to('.progress i', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: .3 } });
+
+  /* generic rise-in for supporting copy */
+  if (!reduce) {
+    $$('[data-rise]').forEach(el => {
+      if (el.closest('.intro__copy')) return;
+      gsap.fromTo(el, { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: 1.1, ease: 'power3.out', clearProps: 'transform', scrollTrigger: { trigger: el, start: 'top 90%', once: true } });
+    });
+  }
+
+  /* ---------- intro: copy rises, "Conversion" writes, photo rises bottom to top ---------- */
+  if (!reduce) {
+    const tl = gsap.timeline({ scrollTrigger: { trigger: '.intro', start: 'top 68%', once: true } });
+    tl.fromTo('.intro__copy [data-rise]', { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 1.1, ease: 'power3.out', stagger: .12 })
+      .add(write($('.intro__title .script'), { duration: 2 }), .45);
+    gsap.timeline({ scrollTrigger: { trigger: '.intro__photo', start: 'top 85%', once: true } })
+      .fromTo('.intro__frame', { clipPath: 'inset(100% 0% 0% 0%)', y: 160 }, { clipPath: 'inset(0% 0% 0% 0%)', y: 0, duration: 1.6, ease: 'expo.out' })
+      .fromTo('.intro__frame img', { scale: 1.4, yPercent: 14 }, { scale: 1, yPercent: 0, duration: 1.9, ease: 'expo.out' }, 0)
+      .fromTo('.intro__photo figcaption', { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: .7 }, .7)
+      .fromTo('.sticker', { scale: 0, rotation: -200 }, { scale: 1, rotation: -12, duration: 1, ease: 'back.out(1.8)' }, .8);
+    gsap.to('.intro__frame img', { yPercent: -6, ease: 'none', scrollTrigger: { trigger: '.intro__photo', start: 'top bottom', end: 'bottom top', scrub: true } });
+  }
+
+  /* ---------- what I do: words write first, then four polaroids walk in like paper cut-outs ---------- */
+  const polas = $$('.pola');
+  const whatChars = $$('.what__title .split').flatMap(splitChars);
+  if (!reduce) {
+    gsap.set(polas, { autoAlpha: 0 });
+    gsap.set(whatChars, { autoAlpha: 0 });
+    gsap.set('.what .btn, .what__hint, .what__eyebrow', { autoAlpha: 0 });
+  }
+  function typeIt(el) {
+    const text = el.dataset.text, o = { n: 0 };
+    el.innerHTML = '<span></span><i class="caret"></i>';
+    const span = el.firstChild;
+    return gsap.to(o, { n: text.length, duration: text.length * .055, ease: 'none', onUpdate: () => { span.textContent = text.slice(0, Math.round(o.n)); }, onComplete: () => gsap.to(el.lastChild, { autoAlpha: 0, delay: 1.4, duration: .3 }) });
+  }
+  function walkIn(el, i) {
+    const fromLeft = el.dataset.from === 'left', sec = el.offsetParent;
+    const startX = fromLeft ? -(el.offsetLeft + el.offsetWidth + 80) : (sec.clientWidth - el.offsetLeft + 80);
+    const rot = +el.dataset.rot || 0, hops = 9 + (i % 2), tl = gsap.timeline();
+    tl.set(el, { autoAlpha: 1, x: startX, y: 0, rotation: rot + (fromLeft ? 12 : -12), skewX: 0 });
+    for (let k = 1; k <= hops; k++) {
+      const p = k / hops, side = k % 2 ? 1 : -1;
+      // stop-motion stride: jerky frames (steps), a waddle tilt and a little hop
+      tl.to(el, { x: startX * (1 - p), rotation: rot + side * 9 * (1 - p * .55), skewX: side * 4, y: -24 * (1 - p * .4), duration: .17, ease: 'steps(3)' })
+        .to(el, { y: 0, skewX: 0, duration: .1, ease: 'steps(2)' });
+    }
+    tl.to(el, { rotation: rot, scale: 1.06, duration: .12, ease: 'steps(2)' })
+      .to(el, { scale: 1, duration: .8, ease: 'elastic.out(1.1,.35)' });
+    return tl;
+  }
+  function enablePolaDrag() {
+    if (!window.Draggable) return;
+    let z = 10;
+    polas.forEach(p => {
+      Draggable.create(p, {
+        type: 'x,y', bounds: '.what', inertia: !!window.InertiaPlugin, edgeResistance: .7,
+        onPress() { p.style.zIndex = ++z; gsap.to(p, { scale: 1.07, rotation: 0, duration: .25 }); },
+        onRelease() { gsap.to(p, { scale: 1, rotation: gsap.utils.random(-10, 10), duration: .6, ease: 'back.out(2)' }); }
+      });
+      if (fine) {
+        p.addEventListener('pointerenter', () => { if (!Draggable.get(p).isPressed) gsap.to(p, { scale: 1.05, duration: .4, ease: 'power3.out' }); });
+        p.addEventListener('pointerleave', () => { if (!Draggable.get(p).isPressed) gsap.to(p, { scale: 1, duration: .5, ease: 'power3.out' }); });
+      }
+    });
+  }
+  if (reduce) enablePolaDrag();
+  else ScrollTrigger.create({
+    trigger: '.what', start: 'top 55%', once: true,
+    onEnter() {
+      const tl = gsap.timeline({ onComplete: enablePolaDrag });
+      tl.set('.what__eyebrow', { autoAlpha: 1 })
+        .add(typeIt($('.what__eyebrow .type')))
+        .fromTo(whatChars, { autoAlpha: 0, yPercent: 50, rotation: 8, filter: 'blur(8px)' }, { autoAlpha: 1, yPercent: 0, rotation: 0, filter: 'blur(0px)', duration: .55, ease: 'power2.out', stagger: .045 }, '-=.1')
+        .add(write($('.what__script'), { duration: 1.7 }), '-=.35')
+        .to('.what .btn', { autoAlpha: 1, y: 0, duration: .7, startAt: { y: 16 } }, '-=.8');
+      const walk = gsap.timeline();
+      polas.forEach((p, i) => walk.add(walkIn(p, i), i * .07));
+      tl.add(walk, '-=.4').to('.what__hint', { autoAlpha: 1, duration: .6 }, '-=.3');
+    }
+  });
+
+  /* ---------- marquees that speed up and flip with scroll velocity ---------- */
+  $$('.mq').forEach(mq => {
+    const track = $('.mq__track', mq), unit = track.innerHTML, base = +mq.dataset.speed || 50;
+    while (track.scrollWidth < innerWidth * 1.4) track.innerHTML += unit;
+    track.innerHTML += track.innerHTML;
+    let half = track.scrollWidth / 2, x = 0, dir = mq.dataset.dir === '1' ? 1 : -1, boost = 0;
+    addEventListener('resize', () => { half = track.scrollWidth / 2; });
+    if (reduce) return;
+    ScrollTrigger.create({ trigger: mq, start: 'top bottom', end: 'bottom top', onUpdate(self) { boost = Math.min(Math.abs(self.getVelocity()) / 9, 520); dir = (self.direction === 1 ? -1 : 1) * (mq.dataset.dir === '1' ? -1 : 1); } });
+    gsap.ticker.add((t, dt) => {
+      boost *= .93;
+      x += dir * (base + boost) * dt / 1000;
+      if (x <= -half) x += half; else if (x > 0) x -= half;
+      track.style.transform = `translate3d(${x.toFixed(2)}px,0,0)`;
+    });
+  });
+
+  /* ---------- counters ---------- */
+  $$('[data-count]').forEach(el => {
+    const end = +el.dataset.count, dec = +(el.dataset.dec || 0), pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    const fmt = v => pre + v.toFixed(dec) + suf;
+    if (reduce) return;
+    el.textContent = fmt(0);
+    const o = { v: 0 };
+    ScrollTrigger.create({ trigger: el, start: 'top 88%', once: true, onEnter: () => gsap.to(o, { v: end, duration: 2.2, ease: 'power3.out', onUpdate: () => { el.textContent = fmt(o.v); } }) });
+  });
+
+  /* ---------- Wonderland: three photos rise one by one, the word rises, then a flash sweeps right to left ---------- */
+  const word = $('.wl__word'), wordIn = $('.wl__word-in');
+  function fitWord() {
+    word.style.fontSize = '100px';
+    word.style.fontSize = ((word.clientWidth - innerWidth * .02) / wordIn.offsetWidth * 100).toFixed(2) + 'px';
+  }
+  fitWord();
+  if (!reduce) {
+    const rise = { clipPath: 'inset(100% 0% 0% 0%)' }, risen = { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.15, ease: 'expo.out' };
+    const sink = { yPercent: 35, scale: 1.35 }, settle = { yPercent: 0, scale: 1, duration: 1.3, ease: 'expo.out' };
+    // the lower half (band, grid, strip) flashes in only after the poster above has finished
+    const cells = $$('.wl__cell').reverse();
+    const lower = gsap.timeline({ paused: true })
+      .fromTo('.wl__flash', { left: '100%', autoAlpha: 1 }, { left: '-60%', duration: 1.25, ease: 'power2.inOut' })
+      .fromTo('.wl__band > *', { x: 90, autoAlpha: 0, filter: 'blur(10px)' }, { x: 0, autoAlpha: 1, filter: 'blur(0px)', duration: .8, ease: 'power3.out', stagger: { each: .09, from: 'end' } }, .12)
+      .fromTo(cells, { clipPath: 'inset(0% 0% 0% 100%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: .8, ease: 'expo.inOut', stagger: .13 }, .22)
+      .fromTo(cells.map(c => $('.wl__flashcell', c)), { opacity: .95 }, { opacity: 0, duration: .7, ease: 'power2.out', stagger: .13 }, .55)
+      .fromTo('.wl__foot > *', { x: 60, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: .7, stagger: { each: .1, from: 'end' } }, '-=.5');
+    let posterDone = false, lowerInView = false;
+    gsap.timeline({ scrollTrigger: { trigger: '.wl__stage', start: 'top 72%', once: true } })
+      .fromTo('.wl__img--a', rise, risen)
+      .fromTo('.wl__img--a img', sink, settle, '<')
+      .fromTo('.wl__img--b', rise, { ...risen, duration: 1.4 }, '-=.75')
+      .fromTo('.wl__img--b img', { yPercent: 25, scale: 1.3 }, { ...settle, duration: 1.6 }, '<')
+      .fromTo('.wl__img--c', rise, risen, '-=.95')
+      .fromTo('.wl__img--c img', sink, settle, '<')
+      .fromTo('.wl__word .ch', { yPercent: 105 }, { yPercent: 0, duration: 1.05, ease: 'power4.out', stagger: .055 }, '-=.7')
+      .fromTo('.wl__lbls .label, .wl__top > *', { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: .7, stagger: .07 }, '-=.8')
+      .add(() => { posterDone = true; if (lowerInView) lower.play(); }, '-=.35');
+    ScrollTrigger.create({ trigger: '.wl__lower', start: 'top 82%', once: true, onEnter: () => { lowerInView = true; if (posterDone) lower.play(); } });
+    gsap.to('.wl__img--b img', { yPercent: -8, ease: 'none', scrollTrigger: { trigger: '.wl__stage', start: 'top bottom', end: 'bottom top', scrub: true } });
+  }
+
+  /* case-study drawer */
+  const U = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+  const CASES = {
+    wonderland: { client: 'Maison Rouge', title: 'Wonderland', year: 'SS26', img: U('1728857442002-5fdf4bcebde2', 1000), role: 'Strategy & creative direction', brief: 'Launch a footwear capsule to a younger audience without losing the house’s couture reputation.', idea: 'A surreal red world where every shoe is a statement. We teased it as a mystery on TikTok, dropped a 30-second film and handed the keys to 40 creators on launch day.', results: [['18.6M', 'views in the first 72 hours'], ['+412%', 'organic reach against the previous launch'], ['9 days', 'to sell through the whole capsule']] },
+    redtape: { client: 'Velvet & Co.', title: 'Red Tape', year: '2025', img: U('1676576844102-89be768745bb', 1000), role: 'Brand strategy & rebrand', brief: 'Reposition a workwear label that customers described as “safe” and “forgettable”.', idea: 'A rebrand built on one bold red and a sharper voice that cuts through corporate tape, with a creator program to carry it.', results: [['+212%', 'engagement within 90 days'], ['140', 'creator ambassadors signed'], ['51%', 'of new customers now arrive through creators']] },
+    lipservice: { client: 'Glossé Beauty', title: 'Lip Service', year: '2026', img: U('1579752515149-489d8d711342', 1000), role: 'Launch campaign & paid media', brief: 'Launch a first lipstick line into a market crowded with celebrity brands.', idea: 'Customers named all twelve shades through a pre-launch vote, and the winning names became the campaign copy.', results: [['9 days', 'to sell out the first drop'], ['62K', 'waitlist sign-ups before launch'], ['3.8x', 'return on ad spend']] },
+    maryjane: { client: 'Cherry Lane', title: 'Mary Jane Drop', year: '2025', img: U('1686668571985-8fd9e7cae040', 1000), role: 'Performance & retention', brief: 'Turn a cult Mary Jane shoe into a repeat bestseller instead of a one-hit drop.', idea: 'A creative testing system shipping 60 ad variations a month, plus a post-purchase flow that turned buyers into collectors.', results: [['4.1x', 'return on ad spend, up from 1.6x'], ['+38%', 'repeat purchase rate'], ['−27%', 'customer acquisition cost']] }
+  };
+  const drawer = $('#drawer'), panel = $('.drawer__panel', drawer), body = $('.drawer__body', drawer);
+  let lastFocus = null;
+  function openCase(key) {
+    const c = CASES[key]; if (!c) return;
+    body.innerHTML = `<p class="label" style="color:var(--red);margin-top:26px">Case study · ${c.year}</p><h3 class="drawer__title" id="drawer-title">${c.title}</h3><p class="label">${c.client} · ${c.role}</p><div class="drawer__img"><img src="${c.img}" alt=""></div><div class="drawer__cols"><div><p class="label" style="color:var(--red)">The brief</p><p>${c.brief}</p></div><div><p class="label" style="color:var(--red)">The idea</p><p>${c.idea}</p></div></div><ul class="drawer__results">${c.results.map(r => `<li><b>${r[0]}</b><span>${r[1]}</span></li>`).join('')}</ul><a href="#contact" class="btn btn--red" data-close>Start a project like this</a>`;
+    lastFocus = document.activeElement;
+    drawer.setAttribute('aria-hidden', 'false');
+    lock(true);
+    gsap.set(drawer, { visibility: 'visible' });
+    gsap.fromTo('.drawer__scrim', { autoAlpha: 0 }, { autoAlpha: 1, duration: .5 });
+    gsap.fromTo(panel, { xPercent: 100 }, { xPercent: 0, duration: reduce ? 0 : .8, ease: 'expo.out' });
+    gsap.from('.drawer__body > *', { y: 24, autoAlpha: 0, duration: .7, stagger: .05, delay: .2, ease: 'power3.out' });
+    panel.scrollTop = 0;
+    $('.drawer__close', drawer).focus({ preventScroll: true });
+  }
+  function closeCase() {
+    if (drawer.getAttribute('aria-hidden') === 'true') return;
+    drawer.setAttribute('aria-hidden', 'true');
+    gsap.to('.drawer__scrim', { autoAlpha: 0, duration: .4 });
+    gsap.to(panel, { xPercent: 100, duration: reduce ? 0 : .6, ease: 'expo.in', onComplete: () => gsap.set(drawer, { visibility: 'hidden' }) });
+    lock(false);
+    if (lastFocus) lastFocus.focus({ preventScroll: true });
+  }
+  drawer.addEventListener('click', e => { if (e.target.closest('[data-close]')) { const a = e.target.closest('a[href^="#"]'); closeCase(); if (a) { e.preventDefault(); setTimeout(() => goTo($(a.getAttribute('href'))), 350); } } });
+
+  /* ---------- services: photo cards with filters, a tilt on hover and an add-to-brief toggle ---------- */
+  const svGrid = $('.svc__grid'), svCards = $$('.sv', svGrid);
+  const svIntro = reduce ? null : gsap.fromTo(svCards, { y: 70, autoAlpha: 0, rotation: i => [-3, 2, -2, 3, -1.5, 2][i] }, { y: 0, autoAlpha: 1, rotation: 0, duration: 1, ease: 'power3.out', stagger: .1, clearProps: 'transform', scrollTrigger: { trigger: svGrid, start: 'top 85%', once: true } });
+  $$('.svc__filter').forEach(btn => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter, show = c => f === 'all' || c.dataset.cat === f;
+    $$('.svc__filter').forEach(b => { const on = b === btn; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', String(on)); });
+    // Flip takes over the cards' transforms, so finish their entrance first
+    if (svIntro && svIntro.progress() < 1) { if (svIntro.scrollTrigger) svIntro.scrollTrigger.kill(); svIntro.progress(1); }
+    if (!window.Flip || reduce) { svCards.forEach(c => { c.style.display = show(c) ? '' : 'none'; }); ScrollTrigger.refresh(); return; }
+    const state = Flip.getState(svCards), h0 = svGrid.offsetHeight;
+    svCards.forEach(c => { c.style.display = show(c) ? '' : 'none'; });
+    // hold the grid's height while cards fly, then ease it to the new size so the page below doesn't jump
+    svGrid.style.height = '';
+    const h1 = svGrid.offsetHeight;
+    gsap.fromTo(svGrid, { height: h0 }, { height: h1, duration: .75, ease: 'power3.inOut', onComplete: () => { svGrid.style.height = ''; ScrollTrigger.refresh(); } });
+    Flip.from(state, {
+      duration: .75, ease: 'power3.inOut', absolute: true, scale: true,
+      onEnter: els => gsap.fromTo(els, { autoAlpha: 0, scale: .8, y: 40 }, { autoAlpha: 1, scale: 1, y: 0, duration: .6, delay: .2, ease: 'power3.out' }),
+      onLeave: els => gsap.to(els, { autoAlpha: 0, scale: .8, duration: .35, ease: 'power2.in' })
+    });
+  }));
+  if (fine && !reduce) svCards.forEach(card => {
+    const img = $('.sv__img img', card);
+    const rx = gsap.quickTo(card, 'rotationX', { duration: .5, ease: 'power3' }), ry = gsap.quickTo(card, 'rotationY', { duration: .5, ease: 'power3' });
+    const ix = gsap.quickTo(img, 'x', { duration: .7, ease: 'power3' }), iy = gsap.quickTo(img, 'y', { duration: .7, ease: 'power3' });
+    card.addEventListener('pointerenter', () => { gsap.set(card, { transformPerspective: 900 }); gsap.to(img, { scale: 1.06, duration: .8, ease: 'power3.out' }); });
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width - .5, ny = (e.clientY - r.top) / r.height - .5;
+      rx(ny * -7); ry(nx * 9); ix(nx * -16); iy(ny * -16);
+      card.style.setProperty('--mx', ((nx + .5) * 100).toFixed(1) + '%');
+      card.style.setProperty('--my', ((ny + .5) * 100).toFixed(1) + '%');
+    });
+    card.addEventListener('pointerleave', () => { rx(0); ry(0); ix(0); iy(0); gsap.to(img, { scale: 1, duration: .8, ease: 'power3.out' }); });
+  });
+  const briefPill = $('.svc__brief'), needBox = v => $$('#brief input[name="need"]').find(i => i.value === v);
+  function syncBrief() {
+    let n = 0;
+    $$('.sv__add').forEach(b => {
+      const box = needBox(b.dataset.need), on = !!box && box.checked;
+      b.setAttribute('aria-pressed', String(on));
+      $('span', b).textContent = on ? 'In your brief' : 'Add to brief';
+      if (on) n++;
+    });
+    $('b', briefPill).textContent = n;
+    briefPill.hidden = n === 0;
+  }
+  $$('.sv__add').forEach(b => b.addEventListener('click', e => {
+    const box = needBox(b.dataset.need);
+    if (!box) return;
+    box.checked = !box.checked;
+    syncBrief();
+    if (box.checked) {
+      const r = b.getBoundingClientRect();
+      burst(e.detail ? e.clientX : r.left + r.width / 2, e.detail ? e.clientY : r.top + r.height / 2, 10);
+      gsap.fromTo(briefPill, { scale: .7 }, { scale: 1, duration: .6, ease: 'elastic.out(1.2,.4)' });
+    }
+    toast(box.checked ? `${b.dataset.need} added to your brief ♥` : `${b.dataset.need} removed from your brief`);
+  }));
+  $$('#brief input[name="need"]').forEach(i => i.addEventListener('change', syncBrief));
+  syncBrief();
+
+  /* ---------- process: pinned sideways scroll, a red thread, and papers that sway and turn over ---------- */
+  const track = $('.proc__track'), thread = $('.proc__thread'), threadPath = $('path', thread);
+  const papers = $$('.paper:not(.paper--end)', track), allPapers = $$('.paper', track);
+  function drawThread() {
+    const w = track.scrollWidth, n = Math.max(6, Math.round(w / 260));
+    let d = 'M0,30', seg = w / n;
+    for (let i = 0; i < n; i++) d += ` Q${(i + .5) * seg},${i % 2 ? 46 : 14} ${(i + 1) * seg},30`;
+    thread.setAttribute('width', w); thread.setAttribute('height', 60); thread.setAttribute('viewBox', `0 0 ${w} 60`);
+    thread.style.width = w + 'px';
+    threadPath.setAttribute('d', d);
+    const L = threadPath.getTotalLength();
+    threadPath.style.strokeDasharray = `${L} ${L}`;
+  }
+  drawThread();
+  function turn(p, force) {
+    const on = typeof force === 'boolean' ? force : !p.classList.contains('is-turned');
+    p.classList.toggle('is-turned', on);
+    p.setAttribute('aria-pressed', String(on));
+    if (reduce) return;
+    if (on) gsap.fromTo($$('.checks li', p), { x: -14, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: .5, stagger: .09, delay: .4, ease: 'power3.out' });
+    gsap.to(p, { keyframes: { rotation: [on ? 5 : -5, on ? -3 : 3, 1.2, 0] }, duration: 1.2, ease: 'sine.out', overwrite: 'auto' });
+  }
+  papers.forEach(p => {
+    p.addEventListener('click', () => turn(p));
+    p.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); turn(p); } });
+    if (!fine || reduce) return;
+    const photo = $('.paper__photo', p);
+    p.addEventListener('pointerenter', () => {
+      gsap.to(p, { keyframes: { rotation: [3.5, -2.5, 1.2, 0] }, duration: 1.3, ease: 'sine.out', overwrite: 'auto' });
+      gsap.to(photo, { y: -12, rotation: 2.5, scale: 1.04, duration: .6, ease: 'back.out(2)' });
+    });
+    p.addEventListener('pointerleave', () => gsap.to(photo, { y: 0, rotation: -2, scale: 1, duration: .6, ease: 'power3.out' }));
+  });
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', () => {
+    drawThread();
+    const dist = () => track.scrollWidth - document.documentElement.clientWidth;
+    if (reduce) { Object.assign(track.style, { flexWrap: 'wrap', width: 'auto' }); thread.style.display = 'none'; return; }
+    const sway = gsap.utils.clamp(-10, 10);
+    let settle;
+    const tl = gsap.timeline({ scrollTrigger: {
+      trigger: '.proc', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: .8, invalidateOnRefresh: true, anticipatePin: 1,
+      onUpdate(self) {
+        // papers on the line sway against the scroll, then settle like hanging paper
+        const r = sway(self.getVelocity() / -240);
+        gsap.to(allPapers, { rotation: i => r * (.7 + (i % 3) * .18), duration: .45, ease: 'power2.out', overwrite: 'auto' });
+        clearTimeout(settle);
+        settle = setTimeout(() => gsap.to(allPapers, { rotation: 0, duration: 2, ease: 'elastic.out(1,.22)', overwrite: 'auto' }), 140);
+      }
+    } });
+    tl.to(track, { x: () => -dist(), ease: 'none' }, 0)
+      .fromTo(threadPath, { strokeDashoffset: () => threadPath.getTotalLength() }, { strokeDashoffset: 0, ease: 'none' }, 0);
+    $$('.proc__card', track).forEach((card, i) => {
+      const rot = i % 2 ? -1.6 : 1.4;
+      gsap.fromTo(card, { rotation: rot * 6, y: 60, autoAlpha: .2 }, { rotation: rot, y: 0, autoAlpha: 1, ease: 'none', scrollTrigger: { trigger: card, containerAnimation: tl, start: 'left 100%', end: 'left 65%', scrub: true } });
+    });
+  });
+  mm.add('(max-width: 900px)', () => {
+    if (reduce) return;
+    $$('.proc__card', track).forEach((card, i) => gsap.fromTo(card, { y: 60, rotation: -4, autoAlpha: 0 }, { y: 0, rotation: i % 2 ? -1.6 : 1.4, autoAlpha: 1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: card, start: 'top 88%', once: true } }));
+  });
+
+  /* ---------- about ---------- */
+  if (!reduce) {
+    gsap.timeline({ scrollTrigger: { trigger: '.about__photo', start: 'top 80%', once: true } })
+      .fromTo('.about__frame', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.5, ease: 'expo.out' })
+      .fromTo('.about__frame img', { scale: 1.35 }, { scale: 1, duration: 1.8, ease: 'expo.out' }, 0)
+      .fromTo('.about__photo .pola__tape', { autoAlpha: 0, y: -16 }, { autoAlpha: 1, y: 0, duration: .5, ease: 'back.out(2)' }, .8);
+    gsap.to('.about__frame img', { yPercent: -7, ease: 'none', scrollTrigger: { trigger: '.about__photo', start: 'top bottom', end: 'bottom top', scrub: true } });
+    ScrollTrigger.create({ trigger: '.sign', start: 'top 88%', once: true, onEnter: () => write($('.sign .script'), { duration: 1.8 }) });
+  }
+
+  /* ---------- love notes: draggable stack ---------- */
+  const stack = $('.notes__stack'), count = $('.notes__count');
+  let notes = $$('.note', stack), busy = false;
+  const tilts = [0, -4.5, 3.5, -2.5];
+  function layout(instant) {
+    notes.forEach((n, i) => { n.style.zIndex = 10 - i; gsap.to(n, { x: 0, y: i * 12, rotation: tilts[i] || 0, scale: 1 - i * .035, autoAlpha: 1, duration: instant ? 0 : .65, ease: 'power3.out' }); });
+    count.textContent = String(+notes[0].dataset.i).padStart(2, '0') + ' / ' + String(notes.length).padStart(2, '0');
+    bindTop();
+  }
+  function next(dir = 1) {
+    if (busy) return; busy = true;
+    const top = notes[0];
+    gsap.to(top, { x: dir * Math.min(innerWidth * .7, 700), y: -40, rotation: dir * 28, autoAlpha: 0, duration: .5, ease: 'power2.in', onComplete() { notes.push(notes.shift()); gsap.set(top, { x: 0, y: notes.length * 12 }); layout(); busy = false; } });
+  }
+  function prev() {
+    if (busy) return; busy = true;
+    const last = notes.pop(); notes.unshift(last);
+    gsap.set(last, { x: -Math.min(innerWidth * .7, 700), y: -40, rotation: -28, autoAlpha: 0 });
+    layout(); setTimeout(() => { busy = false; }, 500);
+  }
+  function bindTop() {
+    if (!window.Draggable) return;
+    notes.forEach(n => { const d = Draggable.get(n); if (d) d.kill(); });
+    Draggable.create(notes[0], {
+      type: 'x', onDrag() { gsap.set(this.target, { rotation: this.x / 14 }); },
+      onRelease() { if (Math.abs(this.x) > 110) { burst(this.pointerX, this.pointerY, 6); next(Math.sign(this.x)); } else gsap.to(this.target, { x: 0, rotation: 0, duration: .6, ease: 'back.out(2)' }); }
+    });
+  }
+  layout(true);
+  $('[data-notes="next"]').addEventListener('click', () => next(1));
+  $('[data-notes="prev"]').addEventListener('click', prev);
+
+  /* ---------- moodboard hearts ---------- */
+  $$('.mood__tile').forEach(t => t.addEventListener('click', e => {
+    const on = t.getAttribute('aria-pressed') !== 'true', n = +t.dataset.likes + (on ? 1 : 0);
+    t.setAttribute('aria-pressed', String(on));
+    $('.mood__like b', t).textContent = n.toLocaleString('en-US');
+    if (on) { const r = t.getBoundingClientRect(); burst(e.clientX || r.left + r.width / 2, e.clientY || r.top + r.height / 2, 10); gsap.fromTo($('.mood__like svg', t), { scale: .4 }, { scale: 1, duration: .6, ease: 'elastic.out(1.2,.4)' }); }
+  }));
+  if (!reduce) gsap.fromTo('.mood__tile', { y: 70, autoAlpha: 0, rotation: () => gsap.utils.random(-6, 6) }, { y: 0, rotation: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', stagger: .08, clearProps: 'transform', scrollTrigger: { trigger: '.mood__grid', start: 'top 85%', once: true } });
+
+  /* ---------- contact ---------- */
+  if (!reduce) ScrollTrigger.create({ trigger: '.contact__script', start: 'top 85%', once: true, onEnter: () => write($('.contact__script'), { duration: 2.4 }) });
+  $$('[data-copy]').forEach(b => b.addEventListener('click', () => copyText(b.dataset.copy, 'Email copied ♥')));
+  const form = $('#brief'), done = $('#brief-done'), err = $('.form__err', form);
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(form), name = (f.get('name') || '').trim(), email = (f.get('email') || '').trim();
+    const bad = [];
+    $('#f-name').closest('.field').classList.toggle('is-bad', !name); if (!name) bad.push('your name');
+    const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    $('#f-email').closest('.field').classList.toggle('is-bad', !okEmail); if (!okEmail) bad.push('a valid email');
+    if (bad.length) { err.textContent = 'Please add ' + bad.join(' and ') + '.'; gsap.fromTo(form, { x: -8 }, { x: 0, duration: .5, ease: 'elastic.out(1.4,.3)' }); return; }
+    err.textContent = '';
+    const needs = f.getAll('need');
+    const text = [`Hi Scarlett,`, ``, `I'm ${name}${f.get('brand') ? ' from ' + f.get('brand') : ''}.`, needs.length ? `I need help with: ${needs.join(', ')}.` : '', f.get('budget') ? `Budget: ${f.get('budget')}.` : '', ``, (f.get('message') || '').trim(), ``, `You can reach me at ${email}.`].filter((l, i, a) => l !== '' || a[i - 1] !== '').join('\n');
+    $('[data-name]', done).textContent = name.split(' ')[0];
+    $('#brief-text').value = text;
+    const r = $('button[type="submit"]', form).getBoundingClientRect();
+    burst(r.left + r.width / 2, r.top + r.height / 2, 16);
+    gsap.to(form, { autoAlpha: 0, y: -20, duration: .4, onComplete() { form.hidden = true; done.hidden = false; gsap.fromTo(done, { autoAlpha: 0, y: 24, rotation: -1.5 }, { autoAlpha: 1, y: 0, rotation: 0, duration: .7, ease: 'power3.out' }); ScrollTrigger.refresh(); } });
+  });
+  $('[data-copy-brief]').addEventListener('click', () => { const t = $('#brief-text'); t.select(); copyText(t.value, 'Brief copied. Paste it into an email to Scarlett ♥'); });
+  $('[data-edit]').addEventListener('click', () => { done.hidden = true; form.hidden = false; gsap.fromTo(form, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: .5 }); ScrollTrigger.refresh(); });
+
+  /* ---------- footer ---------- */
+  if (!reduce) ScrollTrigger.create({ trigger: '.foot', start: 'top 75%', once: true, onEnter: () => write($('.foot__script'), { duration: 2.8 }) });
+  $('.totop').addEventListener('click', () => goTo(0));
+  const clockFmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', minute: '2-digit' });
+  const tick = () => { const s = clockFmt.format(new Date()); $$('.clock').forEach(c => { c.textContent = s; }); };
+  tick(); setInterval(tick, 15000);
+
+  /* ---------- menu ---------- */
+  const menu = $('#menu'), burger = $('.nav__burger'), previews = $$('.menu__preview img');
+  let menuOpen = false;
+  function toggleMenu(force) {
+    const open = typeof force === 'boolean' ? force : !menuOpen;
+    if (open === menuOpen) return;
+    menuOpen = open;
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    burger.classList.toggle('is-open', open);
+    menu.setAttribute('aria-hidden', String(!open));
+    const r = burger.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    const R = Math.hypot(Math.max(cx, innerWidth - cx), Math.max(cy, innerHeight - cy));
+    if (open) {
+      lock(true);
+      gsap.set(menu, { visibility: 'visible' });
+      gsap.fromTo(menu, { clipPath: `circle(0px at ${cx}px ${cy}px)` }, { clipPath: `circle(${R}px at ${cx}px ${cy}px)`, duration: reduce ? 0 : 1, ease: 'expo.inOut' });
+      gsap.fromTo('.menu__link > span', { yPercent: 110 }, { yPercent: 0, duration: .9, stagger: .055, ease: 'power4.out', delay: reduce ? 0 : .35 });
+      gsap.fromTo('.menu__foot > *, .menu__preview', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: .7, stagger: .06, delay: reduce ? 0 : .6 });
+    } else {
+      gsap.to(menu, { clipPath: `circle(0px at ${cx}px ${cy}px)`, duration: reduce ? 0 : .75, ease: 'expo.inOut', onComplete: () => gsap.set(menu, { visibility: 'hidden' }) });
+      lock(false);
+    }
+  }
+  burger.addEventListener('click', () => toggleMenu());
+  $$('.menu__link').forEach(a => a.addEventListener('pointerenter', () => previews.forEach((im, i) => im.classList.toggle('on', i === +a.dataset.preview))));
+
+  /* ---------- anchors, case links, keyboard ---------- */
+  document.addEventListener('click', e => {
+    const c = e.target.closest('[data-case]');
+    if (c) { e.preventDefault(); openCase(c.dataset.case); return; }
+    const a = e.target.closest('a[href^="#"]');
+    if (!a || a.closest('.drawer') || a.classList.contains('skip')) return;
+    const id = a.getAttribute('href');
+    if (id.length < 2) return;
+    const t = id === '#top' ? 0 : $(id);
+    if (t === null) return;
+    e.preventDefault();
+    if (menuOpen) { toggleMenu(false); setTimeout(() => goTo(t), 380); } else goTo(t);
+  });
+  addEventListener('keydown', e => { if (e.key === 'Escape') { if (menuOpen) toggleMenu(false); closeCase(); } });
+
+  /* ---------- click hearts ---------- */
+  addEventListener('pointerdown', e => {
+    if (e.button !== 0 || reduce) return;
+    if (e.target.closest('input, textarea, label, .pola, .note, .mood__tile, .drawer, .menu, .sv__add, .paper')) return;
+    burst(e.clientX, e.clientY, 7);
+  });
+
+  /* ---------- magnetic buttons ---------- */
+  if (fine && !reduce) $$('.magnetic').forEach(el => {
+    const qx = gsap.quickTo(el, 'x', { duration: .5, ease: 'power3' }), qy = gsap.quickTo(el, 'y', { duration: .5, ease: 'power3' });
+    el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); qx((e.clientX - r.left - r.width / 2) * .3); qy((e.clientY - r.top - r.height / 2) * .35); });
+    el.addEventListener('pointerleave', () => { qx(0); qy(0); });
+  });
+
+  /* ---------- cursor ---------- */
+  if (fine) {
+    root.classList.add('has-cursor');
+    const cur = $('.cursor'), dot = $('.cursor__dot'), ring = $('.cursor__ring'), lab = $('b', ring);
+    const dx = gsap.quickTo(dot, 'x', { duration: .08 }), dy = gsap.quickTo(dot, 'y', { duration: .08 });
+    const rx = gsap.quickTo(ring, 'x', { duration: .4, ease: 'power3' }), ry = gsap.quickTo(ring, 'y', { duration: .4, ease: 'power3' });
+    addEventListener('pointermove', e => { dx(e.clientX); dy(e.clientY); rx(e.clientX); ry(e.clientY); });
+    document.addEventListener('pointerover', e => {
+      const t = e.target.closest('[data-cursor], a, button, label, input, textarea');
+      const text = t && t.dataset.cursor ? t.dataset.cursor : '';
+      cur.classList.toggle('is-label', !!text);
+      cur.classList.toggle('is-link', !!t && !text);
+      if (text) lab.textContent = text;
+    });
+    root.addEventListener('mouseleave', () => gsap.to(cur, { autoAlpha: 0, duration: .2 }));
+    root.addEventListener('mouseenter', () => gsap.to(cur, { autoAlpha: 1, duration: .2 }));
+  }
+
+  /* ---------- go ---------- */
+  const refresh = () => { fitWord(); drawThread(); ScrollTrigger.refresh(); };
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+  addEventListener('load', refresh);
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(fitWord, 150); });
+  boot();
+})();
+</script>
+</body>
+</html>
